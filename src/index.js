@@ -24,11 +24,11 @@ function App()
 				<Navbar.Toggle />
 				<Navbar.Collapse>
 					<Nav className="ms-auto">
-						<NavDropdown title='Khoa hoc'>
-							<NavDropdown.Item as={Link} to={"/courses/cppbasic"}>Lap trinh co ban C/C++</NavDropdown.Item>
+						<NavDropdown title='Khóa học'>
+							<NavDropdown.Item as={Link} to={"/courses/cppbasic"}>Lập trình cơ bản C/C++</NavDropdown.Item>
 						</NavDropdown>
-						<Nav.Link as={Link} to={"/share"}>Chia se</Nav.Link>
-						<Nav.Link as={Link} to={"/contact"}>Lien he</Nav.Link>
+						<Nav.Link as={Link} to={"/share"}>Chia sẻ</Nav.Link>
+						<Nav.Link as={Link} to={"/contact"}>Liên hệ</Nav.Link>
 					</Nav>
 				</Navbar.Collapse>
 			</Navbar>
@@ -36,8 +36,8 @@ function App()
 				<Switch>
 					<Route path="/home">Home</Route>
 					<Route path="/courses/cppbasic"><BasicCppCourse/></Route>
-					<Route path="/share">Home</Route>
-					<Route path="/contact">Home</Route>
+					<Route path="/share">Chia sẻ</Route>
+					<Route path="/contact">Liên hệ</Route>
 				</Switch>
 			</div>
 			</Router>
