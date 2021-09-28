@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/App.css"],"names":[],"mappings":"AAAA,UACC,wBACD,CAEA,SACC,YAAa,CACb,aACD","file":"main.1c5b0f08.chunk.css","sourcesContent":[".bg-myRed {\r\n\tbackground-color: crimson;\r\n}\r\n\r\n.content {\r\n\tpadding: 12px;\r\n\theight: 3000px;\r\n}\r\n"]}
