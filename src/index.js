@@ -13,33 +13,33 @@ function App()
 {
 	return(	
 		<div className="App">
-			<Router>
-			<Navbar bg='dark' variant='dark' 
-				sticky='top' expand='sm' collapseOnSelect>
-				<Navbar.Brand href="#home">
-					<img src={logo} width='40px' height='40px' /> {' '}
-					Logo
-				</Navbar.Brand>
+			<Router basename={process.env.PUBLIC_URL}>
+				<Navbar bg='dark' variant='dark' 
+					sticky='top' expand='sm' collapseOnSelect>
+					<Navbar.Brand as={Link} to={"/"}>
+						<img src={logo} width='40px' height='40px' /> {' '}
+						Logo
+					</Navbar.Brand>
 
-				<Navbar.Toggle />
-				<Navbar.Collapse>
-					<Nav className="ms-auto">
-						<NavDropdown title='Khóa học'>
-							<NavDropdown.Item as={Link} to={"/courses/cppbasic"}>Lập trình cơ bản C/C++</NavDropdown.Item>
-						</NavDropdown>
-						<Nav.Link as={Link} to={"/share"}>Chia sẻ</Nav.Link>
-						<Nav.Link as={Link} to={"/contact"}>Liên hệ</Nav.Link>
-					</Nav>
-				</Navbar.Collapse>
-			</Navbar>
-			<div className ='content'>
-				<Switch>
-					<Route path="/home">Home</Route>
-					<Route path="/courses/cppbasic"><BasicCppCourse/></Route>
-					<Route path="/share">Chia sẻ</Route>
-					<Route path="/contact">Liên hệ</Route>
-				</Switch>
-			</div>
+					<Navbar.Toggle />
+					<Navbar.Collapse>
+						<Nav className="ms-auto">
+							<NavDropdown title='Khóa học'>
+								<NavDropdown.Item as={Link} to={"/courses/cppbasic"}>Lập trình cơ bản C/C++</NavDropdown.Item>
+							</NavDropdown>
+							<Nav.Link as={Link} to={"/share"}>Chia sẻ</Nav.Link>
+							<Nav.Link as={Link} to={"/contact"}>Liên hệ</Nav.Link>
+						</Nav>
+					</Navbar.Collapse>
+				</Navbar>
+				<div className ='content'>
+					<Switch>
+						<Route exact path="/">Home</Route>
+						<Route path="/courses/cppbasic"><BasicCppCourse/></Route>
+						<Route path="/share">Chia sẻ</Route>
+						<Route path="/contact">Liên hệ</Route>
+					</Switch>
+				</div>
 			</Router>
 		</div>
 	)
