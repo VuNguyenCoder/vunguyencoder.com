@@ -20,8 +20,8 @@ export default function Home()
 				</li>
 				<li>Lập trình nâng cao cùng C++: Trở thành lập trình viên C++ chuyên sâu (Đang xây dựng)</li>
 				<li>Lập trình nâng cao cùng Java: (Đang xây dựng)</li>
-				<li>Lập trình cơ bản về Web cùng HTML/CSS/JS: (Đang xây dựng)</li>
-				<li>Lập trình cơ bản về Game cùng C++/C#: (Đang xây dựng)</li>
+				<li>Lập trình Web cơ bản cùng HTML/CSS/JS: (Đang xây dựng)</li>
+				<li>Lập trình Game cơ bản cùng C++/OpenGL: (Đang xây dựng)</li>
 				<li>Quản trị hệ thống Linux: (Đang xây dựng)</li>
 			</ul>
 			<p>Hot line liên hệ: <b>088 995 8883</b> (Nếu máy bận xin để lại tin nhắn)</p>

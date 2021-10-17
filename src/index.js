@@ -30,8 +30,11 @@ function App()
 								<NavDropdown.Item as={Link} to={"/courses/cppbasic"}>
 									Lập trình cơ bản (C++)
 								</NavDropdown.Item>
+								<NavDropdown.Item as={Link} to={"/courses/pythonbasic"}>
+									Lập trình cơ bản (Python)
+								</NavDropdown.Item>
 								<NavDropdown.Item as={Link} to={"/courses/graphicsbasic"}>
-									Lập trình đồ họa
+									Lập trình đồ họa (C++/OpenGL)
 								</NavDropdown.Item>
 								<NavDropdown.Item as={Link} to={"/courses/webbasic"}>
 									Lập trình Web (HTML/CSSS/JS)
@@ -44,6 +47,9 @@ function App()
 								</NavDropdown.Item>
 								<NavDropdown.Item as={Link} to={"/courses/javaadvance"}>
 									Lập trình nâng cao (Java)
+								</NavDropdown.Item>
+								<NavDropdown.Item as={Link} to={"/courses/javaadvance"}>
+									Lập trình nâng cao (C#/Winform)
 								</NavDropdown.Item>
 								<NavDropdown.Item as={Link} to={"/courses/linux"}>
 									Quản trị hệ thống Linux
