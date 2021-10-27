@@ -37,7 +37,7 @@ function App()
 									Lập trình đồ họa (C++/OpenGL)
 								</NavDropdown.Item>
 								<NavDropdown.Item as={Link} to={"/courses/webbasic"}>
-									Lập trình Web (HTML/CSSS/JS)
+									Lập trình Web (HTML/CSS/JS)
 								</NavDropdown.Item>
 							</NavDropdown>
 
@@ -48,7 +48,7 @@ function App()
 								<NavDropdown.Item as={Link} to={"/courses/javaadvance"}>
 									Lập trình nâng cao (Java)
 								</NavDropdown.Item>
-								<NavDropdown.Item as={Link} to={"/courses/javaadvance"}>
+								<NavDropdown.Item as={Link} to={"/courses/csharpadvance"}>
 									Lập trình nâng cao (C#/Winform)
 								</NavDropdown.Item>
 								<NavDropdown.Item as={Link} to={"/courses/linux"}>
@@ -78,6 +78,9 @@ function App()
 						<Route path="/courses/cppbasic">
 							<BasicCppCourse/>
 						</Route>
+						<Route path="/courses/pythonbasic">
+							<Maintainance title='Khóa học lập trình Python cơ bản'/>	
+						</Route>
 						<Route path="/courses/graphicsbasic">
 							<Maintainance title='Khóa học lập trình đồ họa'/>	
 						</Route>
@@ -89,6 +92,9 @@ function App()
 						</Route>
 						<Route path="/courses/javaadvance">	
 							<Maintainance title='Khóa học lập trình nâng cao với Java'/>
+						</Route>
+						<Route path="/courses/csharpadvance">	
+							<Maintainance title='Khóa học lập trình nâng cao với C#'/>
 						</Route>
 						<Route path="/courses/linux">	
 							<Maintainance title='Khóa học quản trị hệ thống Linux'/>
