@@ -71,13 +71,17 @@ export default function BasicCppCourse()
 					Sau khi bấm xin tham gia, sẽ có quản trị nhóm xác thực thông tin chuyển khoản và tài khoản của bạn để phê duyệt vào nhóm trong 24h <br/>
 					Lưu ý: Chỉ chấp nhận tham gia với một tài khoản facebook duy nhất <br/>
 					
-					Hot line liên hệ: <b>088 995 8883</b> (Nếu máy bận xin để lại tin nhắn) <br/>
-					Chúc các bạn học tập tốt!
 					</Accordion.Body>
 				</Accordion.Item>
 
 			</Accordion>
+			<br/>
 
+			Hot line liên hệ: <b>088 995 8883</b> (Nếu máy bận xin để lại tin nhắn) <br/>
+			Chúc các bạn học tập tốt!<br/>
+			<br/>
+			<br/>
+			<br/>
 
 		</div>
 	)
