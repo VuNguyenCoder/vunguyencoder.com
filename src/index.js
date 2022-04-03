@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Home from './home'
 import Maintainance from './maintainance'
 import BasicCppCourse from './courses/BasicCppCourse'
+import OOPCppCourse from './courses/OOPCppCourse'
 
 import logo from './VuNguyenCoder_Logo.png'
 
@@ -28,11 +29,20 @@ function App()
 						<Nav className="ms-auto" style={{padding: '7px'}}>
 							<NavDropdown title='Khóa học nền tảng' >
 								<NavDropdown.Item as={Link} to={"/courses/cppbasic"}>
-									Lập trình cơ bản (C++)
+									Lập trình cơ bản (C/C++)
 								</NavDropdown.Item>
 								<NavDropdown.Item as={Link} to={"/courses/pythonbasic"}>
 									Lập trình cơ bản (Python)
 								</NavDropdown.Item>
+
+								<NavDropdown.Divider />
+
+								<NavDropdown.Item as={Link} to={"/courses/oopcpp"}>
+									Lập trình hướng đối tượng (C++)
+								</NavDropdown.Item>
+								
+								<NavDropdown.Divider />
+
 								<NavDropdown.Item as={Link} to={"/courses/graphicsbasic"}>
 									Lập trình đồ họa (C++/OpenGL)
 								</NavDropdown.Item>
@@ -77,6 +87,9 @@ function App()
 						<Route exact path="/"><Home/></Route>
 						<Route path="/courses/cppbasic">
 							<BasicCppCourse/>
+						</Route>
+						<Route path="/courses/oopcpp">
+							<OOPCppCourse/>
 						</Route>
 						<Route path="/courses/pythonbasic">
 							<Maintainance title='Khóa học lập trình Python cơ bản'/>	

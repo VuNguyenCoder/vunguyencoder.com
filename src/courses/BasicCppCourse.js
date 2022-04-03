@@ -8,7 +8,7 @@ export default function BasicCppCourse()
 {
 	return(
 		<div className='Content'>
-			<h2>Khóa học lập trình xây dựng nền tảng với C++</h2><br/>
+			<h2>Khóa học lập trình xây dựng nền tảng (C/C++)</h2><br/>
 			<i>Học phí: 399k VNĐ</i> <br/>
 			<i>Hình thức: Online/Mọi khung giờ</i> <br/>
 			<i>Giảng viên: Vũ Nguyễn Coder</i><br/>

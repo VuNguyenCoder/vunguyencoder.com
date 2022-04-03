@@ -18,7 +18,10 @@ export default function Home()
 					Xây dựng căn cơ nền tảng lập trình - {' '}
 					<MoreDetail courseID='cppbasic'/>
 				</li>
-				<li>Lập trình nâng cao cùng C++: Trở thành lập trình viên C++ chuyên sâu (Đang xây dựng)</li>
+				<li>
+					Lập trình hướng đối tượng (C++) - {' '} 
+					<MoreDetail courseID='oopcpp'/>
+				</li>
 				<li>Lập trình nâng cao cùng Java: (Đang xây dựng)</li>
 				<li>Lập trình Web cơ bản cùng HTML/CSS/JS: (Đang xây dựng)</li>
 				<li>Lập trình Game cơ bản cùng C++/OpenGL: (Đang xây dựng)</li>
