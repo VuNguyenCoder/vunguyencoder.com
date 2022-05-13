@@ -8,6 +8,7 @@ import Home from './home'
 import Maintainance from './maintainance'
 import BasicCppCourse from './courses/BasicCppCourse'
 import OOPCppCourse from './courses/OOPCppCourse'
+import BasicsPythonCourse from './courses/BasicsPythonCourse'
 
 import logo from './VuNguyenCoder_Logo.png'
 
@@ -31,7 +32,7 @@ function App()
 								<NavDropdown.Item as={Link} to={"/courses/cppbasic"}>
 									Lập trình cơ bản (C/C++)
 								</NavDropdown.Item>
-								<NavDropdown.Item as={Link} to={"/courses/pythonbasic"}>
+								<NavDropdown.Item as={Link} to={"/courses/basicspython"}>
 									Lập trình cơ bản (Python)
 								</NavDropdown.Item>
 
@@ -91,8 +92,8 @@ function App()
 						<Route path="/courses/oopcpp">
 							<OOPCppCourse/>
 						</Route>
-						<Route path="/courses/pythonbasic">
-							<Maintainance title='Khóa học lập trình Python cơ bản'/>	
+						<Route path="/courses/basicspython">
+							<BasicsPythonCourse/>	
 						</Route>
 						<Route path="/courses/graphicsbasic">
 							<Maintainance title='Khóa học lập trình đồ họa'/>	
