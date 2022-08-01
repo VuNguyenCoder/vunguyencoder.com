@@ -3,11 +3,11 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 import './course.css'
 
-export default function BasicsPythonCourse()
+export default function BasicsJavascriptCourse()
 {
 	return(
 		<div className='Content'>
-			<h2>Khóa học lập trình cơ bản (Python)</h2><br/>
+			<h2>Khóa học lập trình cơ bản (Javascript)</h2><br/>
 			<i>Học phí: 399k VNĐ</i> <br/>
 			<i>Hình thức: Video</i> <br/>
 			<i>Giảng viên: Vũ Nguyễn Coder</i><br/>
@@ -17,8 +17,6 @@ export default function BasicsPythonCourse()
 				<Accordion.Item eventKey="0">
 					<Accordion.Header><b>1. Khóa học này sẽ phù hợp với:</b></Accordion.Header>
 			    	<Accordion.Body>
-			    	- Các bạn đang chuẩn bị trở thành sinh viên IT, muốn học trước để tránh bị đuối trước khung chương trình đại học<br/>
-					- Các bạn sinh viên IT đang mất gốc<br/>
 					- Các bạn đang muốn xây dựng tư duy về lập trình để phục vụ cho công việc<br/>
 					- Các bạn trái ngành, muốn tìm hiểu và thử sức với công việc lập trình <br/>
 					- Các bạn đang muốn học lập trình từ xa, không cần phải đến lớp những vẫn muốn được support trực tiếp từ giảng viên <br/>
@@ -28,11 +26,11 @@ export default function BasicsPythonCourse()
 				</Accordion.Item>
 
 				<Accordion.Item eventKey="1">
-					<Accordion.Header><b>2. Tại sao chúng ta nên học Python</b></Accordion.Header>
+					<Accordion.Header><b>2. Tại sao chúng ta nên học Javascript</b></Accordion.Header>
 					<Accordion.Body>
-					- Python là ngôn ngữ có cú pháp đơn giản, dễ tiếp cận. Do vậy nếu bạn đang là dân trái ngành muốn chuyển sang IT có thể nhanh chóng làm quen với lập trình cũng như bước đầu hình thành tư duy về lập trình.<br/> 
-					- Mặc dù Python tiếp cận dễ dàng nhưng không đồng nghĩa với việc nó là một ngôn ngữ đơn giản. Python có phạm vi ứng dụng rất đa năng, tức là nó có thể xây dựng mọi thể loại app. <br/>
-					- Python được tích hợp nhiều tính năng để xử lý data nhanh chóng và hiệu quả nên được ứng dụng nhiều trong lĩnh vực AI, Machine learning - một trong những ngành hot nhất Việt Nam hiện nay. Do vậy, nếu bạn xác định muốn theo con đường AI thì chắc chắn cần phải thành thạo về Python. <br/>
+					- Javascript hiện đang là một trong những ngôn ngữ phổ nhất thế giới nhờ vào tính linh hoạt cũng như sự đa năng của nó. Tức là bạn chỉ cần nắm được một ngôn ngữ là Javascript thôi là đã có thể chiến khắp các mặt trận App từ Web, Mobile, Desktop, v.v... Tuy nhiên thế mạnh của Javascript chính là Web app<br/> 
+					- Javascript không quá khó để bắt đầu, bạn có thể tạo ngay một ứng dụng web đơn giản ngay từ những bài đầu tiên. Do vậy, nếu bạn đang là một tấm chiếu mới và đang cần chọn một ngôn ngữ lập trình để bắt đầu con đường IT nhanh chóng thì Javascript là một sự lựa chọn hoàn toàn phù hợp. <br/>
+					- Javascript là ngôn ngữ có nhu cầu tuyển dụng lớn nhất ở Việt Nam cùng với mức thu nhập khủng, do vậy trang bị thêm kiến thức về Javascript sẽ là một điểm cộng cho CV của bạn.<br/>
 					</Accordion.Body>
 				</Accordion.Item>
 
@@ -51,12 +49,11 @@ export default function BasicsPythonCourse()
 					- Biến và kiểu dữ liệu <br/>
 					- Các phép toán cơ bản và biểu thức <br/>
 					- Các cấu trúc điều khiển: Rẽ nhánh, Vòng lặp <br/>
-					- Các dữ liệu tập hợp: List, Tuple, Set, Dict, String <br/>
-					- Function <br/>
-					- File <br/>
-					- Class & Object. <br/>
+					- Các dữ liệu phi nguyên thủy: Object, Function, Array, Set, Map,... <br/>
+					- Class <br/>
+					- Document Object Model (DOM) <br/>
 					- Module<br/>
-					- Lập trình giao diện đồ họa (GUI)<br/>
+					- Tương tác với giao diện Web <br/>
 					- Project cuối khóa<br/>
 					<br/>
 					Tổng cộng gần khoảng 40 baì giảng được phân chia vào 15 chương. Cuối mỗi chương sẽ có các bài tập đi kèm để củng cố lý thuyết và khả năng vận dụng của học viên. 
@@ -74,9 +71,9 @@ export default function BasicsPythonCourse()
 					<Accordion.Header><b>6. Cách thức tham gia</b> </Accordion.Header>
 					<Accordion.Body>
 					<b>- Bước 1:</b> Chuyển khoản học phí là <b>399k VNĐ</b> qua STK: <b>0050 118 22 9999</b> - Nguyễn Anh Vũ - Ngân hàng Quân Đội (MB Bank) <br/>
-					Nội dung chuyển khoản ghi rõ: <b>Basics Python</b> + <b>Tên facebook của bạn</b> <br/>
-					Ví dụ: <b>Basics Python Vu Nguyen</b> <br/>
-					<b>- Bước 2:</b> Tham gia lớp học online tại <a href='https://www.facebook.com/groups/vunguyencoder.basics.python' target='_blank'>FB Group này</a><br/>
+					Nội dung chuyển khoản ghi rõ: <b>Basics Javascript</b> + <b>Tên facebook của bạn</b> <br/>
+					Ví dụ: <b>Basics Javascript Vu Nguyen</b> <br/>
+					<b>- Bước 2:</b> Tham gia lớp học online tại <a href='https://www.facebook.com/groups/vunguyencoder.basics.javascript' target='_blank'>FB Group này</a><br/>
 					Sau khi bấm xin tham gia, sẽ có quản trị nhóm xác thực thông tin chuyển khoản và tài khoản của bạn để phê duyệt vào nhóm trong 24h <br/>
 					Lưu ý: Chỉ chấp nhận tham gia với một tài khoản facebook duy nhất <br/>
 					
