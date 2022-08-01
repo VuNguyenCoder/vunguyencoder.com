@@ -19,7 +19,7 @@ var MoreDetail = (props) =>
 }
 
 var CourseCard = (props) => {
-	return  <Card 	style={{ width: '16rem'}} 
+	return  <Card 	style={{ maxWidth: '20rem'}} 
 				className="text-center" 
 				text={props.text} 
 				bg={props.bg}>
@@ -44,10 +44,7 @@ export default function Home()
 {
 	return(
 		<div style={{padding: '20px'}}>
-			<h2 style={{textAlign: 'center'}}>Lớp học lập trình của Vũ Nguyễn Coder</h2>
-
-			<p>Các khóa học đang vận hành: </p>
-			
+			<h2 style={{textAlign: 'center'}}>Lớp học lập trình của Vũ Nguyễn Coder</h2>	
 			<h4>Ngôn ngữ lập trình cơ bản</h4>
 			<CardGroup>
 				<CourseCard text="dark" bg="light" imgSource={cppLogo}
