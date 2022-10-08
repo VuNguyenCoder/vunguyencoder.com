@@ -11,6 +11,7 @@ import pythonLogo from './images/python.png'
 import jsLogo from './images/javascript.png'
 import oopCppLogo from './images/oop_cpp.png'
 import css3Logo from './images/css3.png'
+import databaseLogo from './images/database.png'
 
 var MoreDetail = (props) =>
 {
@@ -48,15 +49,15 @@ export default function Home()
 			<h4>Ngôn ngữ lập trình cơ bản</h4>
 			<CardGroup>
 				<CourseCard text="dark" bg="light" imgSource={cppLogo}
-							title="C/C++" description="Ngôn ngữ dành cho sự bắt đầu" 
+							title="C/C++" description="Ngôn ngữ của nền tảng" 
 							href="/courses/basics-cpp" 
 				/>
 				<CourseCard text="dark" bg="light" imgSource={pythonLogo}
-							title="Python" description="Ngôn ngữ của cái đẹp và tối giản" 
+							title="Python" description="Ngôn ngữ của cái đẹp và sự tối giản" 
 							href="/courses/basics-python" 
 				/>
 				<CourseCard text="dark" bg="light" imgSource={jsLogo}
-							title="Javascript" description="Ngôn ngữ phổ biến nhất thế giới" 
+							title="Javascript" description="Ngôn ngữ của xu thế" 
 							href="/courses/basics-javascript" 
 				/>
 			</CardGroup>
@@ -74,15 +75,22 @@ export default function Home()
 			</CardGroup>
 			<br/>
 			<h4>Khóa học khác</h4>
-			<CourseCard text="dark" bg="light" imgSource={oopCppLogo}
-						title="OOP" description="Mô hình lập trình phổ biến mọi thời đại" 
-						href="/courses/oop-cpp" 
-			/>
+			<CardGroup>
+				<CourseCard text="dark" bg="light" imgSource={oopCppLogo}
+							title="OOP" description="Mô hình lập trình hướng đối tượng (C++)" 
+							href="/courses/oop-cpp" 
+				/>
+				<CourseCard text="dark" bg="light" imgSource={databaseLogo}
+							title="Database" description="Quản trị cơ sở dữ liệu" 
+							href="/courses/database" 
+				/>
+			</CardGroup>
 			<br/>
-			<b>Các khóa học sắp mở cửa </b><br/>
+			<b>Các khóa học sắp mở cửa trong thời gian tới </b><br/>
 			<ul>
-				<li>Lập trình hướng đối tượng (Java) - Mở lớp 1/9/2022</li>
-				<li>Quản trị Linux - Mở lớp 1/9/2022</li>
+				<li>Nguyên lý phát triển ứng dụng web</li>
+				<li>Quản trị hệ thống Linux</li>
+				<li>Lập trình cơ bản (Java)</li>
 			</ul>
 			<p>Hot line liên hệ: <b>088 995 8883</b> (Nếu máy bận xin để lại tin nhắn)</p>
 		</div>

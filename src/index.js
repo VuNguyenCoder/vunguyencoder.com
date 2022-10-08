@@ -11,6 +11,8 @@ import OOPCppCourse from './courses/OOPCppCourse'
 import BasicsPythonCourse from './courses/BasicsPythonCourse'
 import BasicsJavascriptCourse from './courses/BasicsJavascriptCourse'
 import HTMLCourse from './courses/HTMLCourse'
+import CSSCourse from './courses/CSSCourse'
+import DatabaseCourse from './courses/DatabaseCourse'
 
 import logo from './VuNguyenCoder_Logo.png'
 
@@ -55,6 +57,15 @@ function App()
 
 								<NavDropdown.Divider />
 
+								<NavDropdown.Item as={Link} to={"/courses/html"}>
+									HTML
+								</NavDropdown.Item>
+								
+								<NavDropdown.Item as={Link} to={"/courses/css"}>
+									CSS 
+								</NavDropdown.Item>
+								<NavDropdown.Divider />
+
 								<NavDropdown.Item as={Link} to={"/courses/algorithm-and-data-structure"}>
 									Cấu trúc dữ liệu và giải thuật (C++)
 								</NavDropdown.Item>
@@ -68,34 +79,34 @@ function App()
 
 							<NavDropdown title='Khóa học Desktop App'>
 								<NavDropdown.Item as={Link} to={"/courses/desktop-qt"}>
-									Lập trình ứng dụng (Qt, C++)
+									Lập trình ứng dụng (Qt)
 								</NavDropdown.Item>
 								<NavDropdown.Item as={Link} to={"/courses/desktop-opengl"}>
-									Lập trình đồ họa/Game (OpenGL, C++)
+									Lập trình đồ họa/Game (OpenGL)
 								</NavDropdown.Item>
 								<NavDropdown.Item as={Link} to={"/courses/desktop-javafx"}>
-									Lập trình ứng dụng (JavaFx, Java)
+									Lập trình ứng dụng (JavaFx)
 								</NavDropdown.Item>
 								<NavDropdown.Item as={Link} to={"/courses/desktop-reactnative"}>
-									Lập trình ứng dụng (React Native, Javascript)
+									Lập trình ứng dụng (React Native)
 								</NavDropdown.Item>
 								<NavDropdown.Item as={Link} to={"/courses/desktop-dotnet"}>
-									Lập trình ứng dụng (Dotnet, C#)
+									Lập trình ứng dụng (.NET)
 								</NavDropdown.Item>
 							</NavDropdown>
 
 							<NavDropdown title='Khóa học Web App'>
 								<NavDropdown.Item as={Link} to={"/courses/web-fundamental"}>
-									Lập trình web căn bản (HTTP, HTML, CSS) 
+									Nguyên lý phát triển ứng dụng web
 								</NavDropdown.Item>
 								<NavDropdown.Item as={Link} to={"/courses/web-frontend-react"}>
-									Lập trình web frontend (React, Javascript)
+									Phát triển web frontend (React)
 								</NavDropdown.Item>
 								<NavDropdown.Item as={Link} to={"/courses/web-backend-express"}>
-									Lập trình web backend (Express, Javascript)
+									Phát triển web backend (Express)
 								</NavDropdown.Item>
 								<NavDropdown.Item as={Link} to={"/courses/web-backend-django"}>
-									Lập trình web backend (Django, Python)
+									Phát triển web backend (Django)
 								</NavDropdown.Item>
 							</NavDropdown>
 
@@ -150,7 +161,7 @@ function App()
 						</Route>
 						
 						<Route path="/courses/css">
-							<Maintainance title='Khóa học thiết kế và tạo kiểu giao diện (CSS)' />	
+							<CSSCourse/>
 						</Route>
 
 						<Route path="/courses/oop-java">
@@ -210,7 +221,7 @@ function App()
 						</Route>
 
 						<Route path="/courses/database">
-							<Maintainance title='Khóa học quản trị cơ sở dữ liệu'/>	
+							<DatabaseCourse/>
 						</Route>
 
 						<Route path="/courses/networking">	

@@ -47,9 +47,24 @@ export default function BasicCppCourse()
 				<Accordion.Item eventKey="3">
 					<Accordion.Header><b>4. Nội dung kiến thức</b></Accordion.Header>
 					<Accordion.Body>
-					- Nắm chắc các khái niệm căn bản trong lập trình như biến, hàm, câu điều kiện, vòng lặp, con trỏ, cấu trúc dữ liệu,v.v.. Tổng cộng là 15 bài giảng và nhiều bài tập thực hành đi kèm. Các bạn sẽ hiểu được chúng hoạt động như thế nào thông qua các ví dụ trực tiếp trên công cụ lập trình Visual Studio. <br/>
-			- Sau mỗi bài học, các bạn sẽ có các bài tập trắc nghiệm và thực hành để đảm bảo lĩnh hội được kiến thức. Trong khi làm, mắc ở đâu, mình sẽ hỗ trợ.<br/>
-			- Cuối khóa, bạn sẽ làm được một chương trình phần mềm quản lý, vận dụng tổng hợp kiến thức của toàn khóa học. Hoàn thành xong chương trình này, bạn đã có căn cơ để học sang những kiến thức chuyên sâu về các loại phần mềm cụ thể.
+						- Biến và kiểu dữ liệu<br/>
+						- Các phép toán cơ bản<br/>
+						- Các cấu trúc điều khiển: Rẽ nhánh, lặp <br/>
+						- Kiểu pointer (con trỏ) <br/>
+						- Kiểu function (hàm) <br/>
+						- Kiểu array (mảng) <br/>
+						- Kiểu chuỗi kí tự với char array (C) và std::string (C++) <br/>
+						- Kiểu dữ liệu tự định nghĩa: struct, class, enum <br/>
+						- Template <br/>
+						- Bộ nhớ Heap và cấp phát động <br/>
+						- Kiểu danh sách liên kết <br/> 
+						- Các kiểu STL Container 
+						- Các luồng nhập xuất dữ liệu <br/>
+						- Giới thiệu về các ứng dụng của C/C++ trong việc phát triển app <br/>
+						- Thực hành xây dựng Console app quản lý <br/>
+						<br/>
+						
+						Tổng cộng gần khoảng 40 baì giảng được phân chia vào 15 chương. Cuối mỗi chương sẽ có các bài tập đi kèm để củng cố lý thuyết và khả năng vận dụng của học viên. 
 					</Accordion.Body>
 				</Accordion.Item>
 
