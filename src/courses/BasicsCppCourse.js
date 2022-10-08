@@ -58,7 +58,7 @@ export default function BasicCppCourse()
 						- Template <br/>
 						- Bộ nhớ Heap và cấp phát động <br/>
 						- Kiểu danh sách liên kết <br/> 
-						- Các kiểu STL Container 
+						- Các kiểu STL Container <br/> 
 						- Các luồng nhập xuất dữ liệu <br/>
 						- Giới thiệu về các ứng dụng của C/C++ trong việc phát triển app <br/>
 						- Thực hành xây dựng Console app quản lý <br/>
