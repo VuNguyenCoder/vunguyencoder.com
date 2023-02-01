@@ -4,28 +4,26 @@ import { BrowserRouter, Route, Switch, Link } from 'react-router-dom'
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-import Home from './home'
-import Maintainance from './maintainance'
-import BasicsCppCourse from './courses/BasicsCppCourse'
-import OOPCppCourse from './courses/OOPCppCourse'
-import BasicsPythonCourse from './courses/BasicsPythonCourse'
-import BasicsJavascriptCourse from './courses/BasicsJavascriptCourse'
-import HTMLCourse from './courses/HTMLCourse'
-import CSSCourse from './courses/CSSCourse'
-import DatabaseCourse from './courses/DatabaseCourse'
+import Home from './pages/home'
+import Maintainance from './pages/maintainance'
+import BasicsCppCourse from './pages/courses/CourseCpp'
+import OOPCppCourse from './pages/courses/CourseOOP'
+import BasicsPythonCourse from './pages/courses/CoursePython'
+import BasicsJavascriptCourse from './pages/courses/CourseJavascript'
+import HTMLCourse from './pages/courses/CourseHTML'
+import CSSCourse from './pages/courses/CourseCSS'
+import DatabaseCourse from './pages/courses/CourseDatabase'
 
 import logo from './VuNguyenCoder_Logo.png'
 
-function App()
-{
+function App() {
 	return(	
 		<div>
 			<BrowserRouter basename={process.env.PUBLIC_URL}>
 				<Navbar bg='dark' variant='dark' 
-					sticky='top' expand='lg' collapseOnSelect>
+					sticky='top' expand='md' collapseOnSelect>
 					<Navbar.Brand as={Link} to={"/"}>
-						<img src={logo} width='80px' height='40px' style={{filter: 'invert(100%)'}} /> {' '}
-							VuNguyenCoder.com
+						<img src={logo} width='80px' height='40px' style={{filter: 'invert(100%)', margin: '0 10px'}} />
 					</Navbar.Brand>
 
 					<Navbar.Toggle />

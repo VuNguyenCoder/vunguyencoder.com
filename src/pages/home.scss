@@ -1,0 +1,25 @@
+//@import "~bootstrap/scss/bootstrap.scss";
+
+.course-icon {
+    transition: 0.5s ease;
+}
+
+.course-icon:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 0.5s ease;
+}
+
+.course-icon {
+    width: 60px;
+    height: 60px;
+}
+
+/*
+@include media-breakpoint-up(md) { 
+    .course-icon {
+        width: 100px;
+        height: 100px;
+    }
+}*/

@@ -3,7 +3,7 @@ import { Accordion } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import './course.css'
-import course_preview from './course_preview.jpg'
+import course_preview from './../../assets/images/course_preview.jpg'
 
 export default function OOPCppCourse()
 {
