@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Popover from 'react-bootstrap/Popover';
 import Tooltip from 'react-bootstrap/Tooltip';
+import { IconBookmarkHeart, IconBox, IconChat, IconClock, IconFacebook, IconGear, IconInstagram, IconLinkedIn, IconMoney, IconQuestion, IconTiktok, IconTool, IconYoutube } from '../components/icons';
 
 let goToRoadMap = () => {
 	document.getElementById('roadmap').scrollIntoView(true)
@@ -12,10 +13,16 @@ let goToRoadMap = () => {
 
 function ContentCourse(props) {
 	return (<>
-		<a href={props.href}>    
-			<img src={"img/" + props.imgFilename} className="course-icon p-2"/>
-		</a>
-		<h5 className="course-name">{props.title}</h5>
+		<div class="course-container p-2">
+			<a href={props.href}>    
+				<img src={"img/" + props.imgFilename} className="course-icon"/>
+			</a>
+			<span class={"badge rounded-circle small course-priority " + (props.optional ? "bg-success" : "bg-danger")}>
+				✔
+			</span>
+		</div>
+		<div className={"course-name " + (props.opened ? "fw-bold" : "fw-normal fst-italic")}>{props.title}</div>
+		<div className={"text-center text-muted fs-6 " + (props.opened ? "fw-normal" : "fw-lighter")}>{props.subtitle}</div>
 	</>)
 }
 
@@ -32,7 +39,7 @@ function Arrow() {
 		<Container>
 			<div className="row mx-5 justify-content-center">
 				<div className="col col-md-6 text-center">
-					<img src="img/down-arrow.png" className="w-25 p-2"></img>
+					<img src="img/icon/down-arrow.png" className="w-25 p-2"></img>
 				</div>
 			</div>
 		</Container>
@@ -45,7 +52,7 @@ export default function Home() {
 			<div className="container col-xxl-8 px-4 py-5">
 				<div className="row flex-lg-row-reverse align-items-center g-5 py-5">
 					<div className="col-10 col-sm-8 col-lg-6">
-						<img src="img/vunguyen.png" className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy" style={{transform: 'scale(1.2)'}}>
+						<img src="img/icon/vunguyen.png" className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy" style={{transform: 'scale(1.2)'}}>
 						</img>
 					</div>
 					<div className="col-lg-6">
@@ -60,144 +67,185 @@ export default function Home() {
 			</div>
 		</Container>
 		
-		<div id="roadmap" className="display-2 fw-bold text-center m-5" style={{scrollMarginTop: '60px'}}>
-        	Roadmap
+		<div id="roadmap" className="m-5" style={{scrollMarginTop: '60px'}}>
+			<div className="display-2 fw-bold text-center">Roadmap</div>
+			<div class="small fw-bold">Các học phần in đậm: đang hoạt động</div>
+			<div class="small fst-italic">Các học phần in nghiêng : chưa hoạt động</div>
+			<div>
+				<span class="badge rounded-circle small course-priority bg-danger">
+					✔
+				</span> 
+				<span> : học phần bắt buộc</span>
+			</div>
+			<div>
+				<span class="badge rounded-circle small course-priority bg-success">
+					✔
+				</span> 
+				<span> : học phần tùy chọn</span>
+			</div>
     	</div>
 		<HeaderPhase>Phase 1: Nhập môn</HeaderPhase>
-		<Container style={{width: '90%'}}>
-			<Row>
-				<div className="col text-center lead">
-					Programing language
-				</div>
-			</Row>
-			<Row className="border border-primary border-2" style={{borderRadius: '20px'}}>
-				<div className="col-6 text-center">	
-					<ContentCourse href="/courses/basics-cpp" imgFilename="cpp.png" title="C/C++" />
-				</div>
-				<div className="col-6 text-center">
-					<ContentCourse href="/courses/basics-python" imgFilename="python.png" title="Python" />	         
-				</div>
-			</Row>
-		</Container>
-
-		<Arrow />
-
-		<HeaderPhase>Phase 2: Mở rộng</HeaderPhase>
 		<Container className="border border-primary border-1 mx-auto" style={{width: '90%', borderRadius: '20px'}}>
 			<Row className="mx-4 mb-4 g-5">
-				<Col xs={12} md={6} lg={4} className="text-center">
+				<Col xs={12} md={4} className="text-center">
 					<Row>
-						<Col className="text-center lead">Markup language</Col>
+						<Col className="text-center lead">&nbsp;</Col>
 					</Row>
-					<Row className="border border-primary border-2" style={{borderRadius: '20px'}}>
+					<Row className="" style={{borderRadius: '20px'}}>
 						<Col>
-							<ContentCourse href="/courses/html" imgFilename="html.png" title="HTML" />	         
-						</Col>
-						<Col>
-							<ContentCourse href="/courses/css" imgFilename="css.png" title="CSS" />	         
+							<ContentCourse href="/courses/basics-it" imgFilename="icon/it.png" title="Tin học cơ sở" />	         
 						</Col>
 					</Row>    
 				</Col>
-				<div className="col-12 col-md-6 col-lg-4 text-center">
+				<Col xs={12} md={8} className="text-center">
+					<Row>
+						<Col className="text-center lead">Programing language</Col>
+					</Row>
+					<Row className="border border-primary border-2" style={{borderRadius: '20px'}}>
+						<Col>
+							<ContentCourse href="/courses/basics-cpp" imgFilename="icon/cpp.png" title="C/C++" opened/>	         
+						</Col>
+						<Col>
+							<ContentCourse href="/courses/basics-python" imgFilename="icon/python.png" title="Python" opened />	         
+						</Col>
+					</Row>    
+				</Col>
+				
+			</Row>
+		</Container>
+		<Arrow />
+		<HeaderPhase>Phase 2: Xây dựng nền tảng</HeaderPhase>
+		<Container className="border border-primary border-1 mx-auto" style={{width: '90%', borderRadius: '20px'}}>
+			<Row className="mx-4 mb-4 g-5">
+				<Col className="text-center">
+					<Row>
+						<Col className="text-center lead">&nbsp;</Col>
+					</Row>
+					<Row className="" style={{borderRadius: '20px'}}>
+						<Col>
+							<ContentCourse href="/courses/oop-cpp" imgFilename="icon/oop_cpp.png" title="Hướng đối tượng" opened/>	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/dsa.png" title="Cấu trúc dữ liệu & giải thuật" />	         
+						</Col>
+						<Col>
+							<ContentCourse href="/courses/database" imgFilename="icon/database.png" title="Cơ sở dữ liệu" opened />	         
+						</Col>
+					</Row>    
+				</Col>	
+			</Row>
+		</Container>
+		<Arrow />
+
+		<HeaderPhase>Phase 3: Phát triển</HeaderPhase>
+		<Container className="border border-primary border-1 mx-auto" style={{width: '90%', borderRadius: '20px'}}>
+			<Row className="mx-4 mb-4 g-5">
+				<div className="col-12 text-center">
 					<Row>
 						<div className="col text-center text-muted lead">Programing language</div>
 					</Row>
 					<Row className="border border-primary border-2 rounded-4" style={{borderRadius: '20px'}}>
 						<Col>
-							<ContentCourse href="/courses/basics-javascript" imgFilename="javascript.png" title="Javascript" />	         
+							<ContentCourse href="/courses/basics-javascript" imgFilename="icon/javascript.png" title="Javascript" opened />
 						</Col>
 						<Col>
-							<ContentCourse href="#" imgFilename="java.png" title="Java" />	         
+							<ContentCourse href="#" imgFilename="icon/cpp.png" title="C++ (Advanced)" />	         
 						</Col>
 						<Col>
-							<ContentCourse href="#" imgFilename="c-sharp.png" title="C#" />	         
+							<ContentCourse href="#" imgFilename="icon/java.png" title="Java" />	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/c-sharp.png" title="C#" optional/>	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/php.png" title="PHP" optional />	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/ruby.png" title="Ruby" optional />	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/golang.png" title="Golang" optional />	         
 						</Col>
 					</Row>    
 				</div>
-				<div className="col-12 col-md col-lg-4 text-center">
+				<Col xs={12} md={6} className="text-center">
+					<Row>
+						<Col className="text-center lead">Markup language</Col>
+					</Row>
+					<Row className="border border-primary border-2" style={{borderRadius: '20px'}}>
+						<Col>
+							<ContentCourse href="/courses/html" imgFilename="icon/html.png" title="HTML" opened/>	         
+						</Col>
+						<Col>
+							<ContentCourse href="/courses/css" imgFilename="icon/css.png" title="CSS" opened/>	         
+						</Col>
+					</Row>    
+				</Col>
+				<div className="col-12 col-md-6 text-center">
 					<div className="row">
-						<div className="col text-center text-muted lead">Data</div>
+						<div className="col text-center text-muted lead">&nbsp;</div>
 					</div>
-					<div className="row border border-primary border-2 rounded-4" style={{borderRadius: '20px'}}>
+					<Row style={{borderRadius: '20px'}}>
 						<Col>
-							<ContentCourse href="/courses/database" imgFilename="database.png" title="Database" />	         
+							<ContentCourse href="/courses/linux" imgFilename="icon/linux.png" title="Linux" />	         
 						</Col>
 						<Col>
-							<ContentCourse href="#" imgFilename="dsa.png" title="Data structure" />	         
+							<ContentCourse href="#" imgFilename="icon/computer-networks.png" title="Networking" />	         
 						</Col>
-					</div>    
+					</Row>    
 				</div>
 			</Row>
 		</Container>
 		
 		<Arrow/>
 
-		<HeaderPhase>Phase 3: Phát triển</HeaderPhase>
+		<HeaderPhase>Phase 4: Chuyên môn hóa</HeaderPhase>
 		<Container className="border border-primary border-1" style={{width: '90%', borderRadius: '20px'}}>
 			<Row className="mx-4 mb-4 g-5">
-				<Col className="text-center">
+				<Col xs={12} md={6} className="text-center">
 					<Row>
-						<Col className="text-center lead">Architecture</Col>
+						<Col className="text-center lead">Front-end</Col>
 					</Row>
 					<Row className="border border-primary border-2" style={{borderRadius: '20px'}}>
 						<Col>
-							<ContentCourse href="/courses/oop-cpp" imgFilename="oop_cpp.png" title="Object oriented programing" />	         
+							<ContentCourse href="#" imgFilename="icon/react.png" title="React" subtitle="Web/Mobile"/>	         
 						</Col>
 						<Col>
-							<ContentCourse href="#" imgFilename="computer-networks.png" title="Network programing" />	         
+							<ContentCourse href="#" imgFilename="icon/flutter.png" title="Flutter" subtitle="Mobile" optional />	         
 						</Col>
 						<Col>
-							<ContentCourse href="#" imgFilename="design-pattern.png" title="Design Pattern" />	         
+							<ContentCourse href="#" imgFilename="icon/qt.png" title="Qt" subtitle="Desktop/Mobile" optional/>	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/textual.jpeg" title="Textual" subtitle="Console" optional />	         
 						</Col>
 					</Row>    
 				</Col>
-				<Col className="text-center">
+				<Col xs={12} md={6} className="text-center">
 					<Row>
-						<Col className="text-center lead">System Management</Col>
+						<Col className="text-center lead">Back-end</Col>
 					</Row>
 					<Row className="border border-primary border-2" style={{borderRadius: '20px'}}>
 						<Col>
-							<ContentCourse href="#" imgFilename="linux.png" title="Linux" />	         
+							<ContentCourse href="#" imgFilename="icon/express.png" title="Express.js" subtitle="Web service"/>	         
 						</Col>
 						<Col>
-							<ContentCourse href="#" imgFilename="docker.png" title="Docker" />	         
-						</Col>
-					</Row>    
-				</Col>
-			</Row>
-		</Container>
-		
-		<Arrow/>
-
-		<HeaderPhase>Phase 4: Xây dựng</HeaderPhase>
-		<Container className="border border-primary border-1" style={{width: '90%', borderRadius: '20px'}}>
-			<Row className="mx-4 mb-4 g-5">
-				<Col className="text-center">
-					<Row>
-						<Col className="text-center lead">Frontend Programing</Col>
-					</Row>
-					<Row className="border border-primary border-2" style={{borderRadius: '20px'}}>
-						<Col>
-							<ContentCourse href="#" imgFilename="react.png" title="React" />	         
+							<ContentCourse href="#" imgFilename="icon/flask.png" title="Flask" subtitle="Web service" />	         
 						</Col>
 						<Col>
-							<ContentCourse href="#" imgFilename="flutter.png" title="Flutter" />	         
+							<ContentCourse href="#" imgFilename="icon/gin.png" title="Gin" subtitle="Web service" optional />	      
 						</Col>
 						<Col>
-							<ContentCourse href="#" imgFilename="qt.png" title="Qt" />	         
-						</Col>
-					</Row>    
-				</Col>
-				<Col className="text-center">
-					<Row>
-						<Col className="text-center lead">Backend</Col>
-					</Row>
-					<Row className="border border-primary border-2" style={{borderRadius: '20px'}}>
-						<Col>
-							<ContentCourse href="#" imgFilename="express.png" title="Express.js" />	         
+							<ContentCourse href="#" imgFilename="icon/haproxy.png" title="HAProxy" subtitle="Load balancer" optional />	      
 						</Col>
 						<Col>
-							<ContentCourse href="#" imgFilename="flask.png" title="Flask" />	         
+							<ContentCourse href="#" imgFilename="icon/redis.png" title="Redis" subtitle="Cache" optional />	      
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/rabbitmq.png" title="RabbitMQ" subtitle="Message Broker" optional /> 
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/elastic.png" title="Elasticsearch" subtitle="Search engine" optional />	         
 						</Col>
 					</Row>    
 				</Col>
@@ -207,6 +255,70 @@ export default function Home() {
 		<Arrow/>
 
 		<HeaderPhase>Phase 5: Mở rộng</HeaderPhase>
+		<Container className="border border-primary border-1" style={{width: '90%', borderRadius: '20px'}}>
+			<Row className="mx-4 mb-4 g-5">
+				<Col xs={12} md={8} className="text-center">
+					<Row>
+						<Col className="text-center lead">DevOps</Col>
+					</Row>
+					<Row className="border border-primary border-2" style={{borderRadius: '20px'}}>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/virtualbox.png" title="Virtual box" subtitle="Virtualization" />	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/docker.png" title="Docker" subtitle="Containerization" />	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/vagrant.png" title="Vagrant" optional />	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/kurbernetes.png" title="Kubernates" subtitle="Container orchestration"/>
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/aws.png" title="AWS" subtitle="Cloud computing"/>	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/ansible.png" title="Ansible" subtitle="Configuration automation"/>	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/terraform.png" title="Terraform" subtitle="Infrastructure as code"/>	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/jenkins.png" title="Jenkins" subtitle="CI/CD"/>	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/prometheus.png" title="Prometheus" subtitle="Monitoring" optional/>	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/git.png" title="Git" subtitle="Version control"/>	         
+						</Col>
+					</Row>    
+				</Col>
+				<Col xs={12} md={4} className="text-center">
+					<Row>
+						<Col className="text-center lead">Programing language</Col>
+					</Row>
+					<Row className="border border-primary border-2" style={{borderRadius: '20px'}}>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/lua.png" title="Lua" optional />	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/perl.png" title="Perl" optional />	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/haskell.png" title="Haskell" optional />	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/rust.png" title="Rust" optional />	         
+						</Col>
+					</Row>    
+				</Col>
+			</Row>
+		</Container>
+
+		<Arrow/>
+
+		<HeaderPhase>Phase 6</HeaderPhase>
 		<Container style={{width: '90%'}}>
 			<Row>
 				<div className="col text-center lead">
@@ -215,20 +327,17 @@ export default function Home() {
 			</Row>
 			<Row className="border border-primary border-2" style={{borderRadius: '20px'}}>
 				<div className="col text-center">
-					<ContentCourse href="/course/basics-python" imgFilename="ai.png" title="AI" />	         
+					<ContentCourse href="#" imgFilename="icon/ai.png" title="AI" optional />	         
 				</div>
 				<div className="col text-center">
-					<ContentCourse href="/course/basics-python" imgFilename="elastic.png" title="Search Engine" />	         
-				</div>
-				<div className="col text-center">
-					<ContentCourse href="/course/basics-python" imgFilename="data-visualization.png" title="Data Visulazation" />	         
+					<ContentCourse href="#" imgFilename="icon/data-visualization.png" title="Data Visulazation" optional />	         
 				</div>
 			</Row>
 		</Container>
 		
 		<Arrow/>
 
-		<HeaderPhase>To be continue...</HeaderPhase>
+		<HeaderPhase>To be continue... <br/>Học, học nữa, học mãi!<br/></HeaderPhase>
 		
 		<div className="bg-dark text-secondary px-4 py-5 text-center">
 			<div className="py-5">
@@ -280,128 +389,65 @@ export default function Home() {
 				</div>
 			</div>
 		</div>
-
 		<div className="container px-4 py-5 mt-0" id="features">
 			<h2 className="pb-2 border-bottom">Ưu điểm</h2>
 			<div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
 				<div className="col d-flex align-items-start">
-					<svg className="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlinkHref="#bootstrap"/></svg>
+					<IconBox width="1.75em" height="1.75em" />
 					<div>
-						<h3 className="fw-bold mb-0 fs-4">Giảng dạy trực quan</h3>
-						<p>Thay vì chỉ dẫn qua slide như phương pháp truyền thống, thì tôi tập trung vào code</p>
+						<h3 className="fw-bold mb-0 fs-4">Tính thực tế</h3>
+						<p>Bài giảng được thực hiện song song với code trực tiếp trên công cụ. </p>
 					</div>
 				</div>
 				<div className="col d-flex align-items-start">
-					<svg className="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlinkHref="#cpu-fill"/></svg>
+					<IconQuestion width="1.75em" height="1.75em" />
 					<div>
 						<h3 className="fw-bold mb-0 fs-4">Hiểu bản chất</h3>
-						<p>Chương trình chạy được là vì sao?</p>
+						<p>Không chỉ là nhìn code chạy được mà các bạn sẽ hiểu tại sao kết quả lại như thế!</p>
 					</div>
 				</div>
 				<div className="col d-flex align-items-start">
-					<svg className="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlinkHref="#calendar3"/></svg>
+					<IconGear width="1.75em" height="1.75em" />
 					<div>
 						<h3 className="fw-bold mb-0 fs-4">Thực hành</h3>
-						<p>Paragraph of text beneath the heading to explain the heading.</p>
+						<p>Sau các bài giảng trong một chương, sẽ có phần bài thực hành từ dễ đến khó để các bạn được củng cố kiến thức</p>
 					</div>
 				</div>
 				<div className="col d-flex align-items-start">
-					<svg className="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlinkHref="#home"/></svg>
+					<IconClock width="1.75em" height="1.75em" />
 					<div>
 						<h3 className="fw-bold mb-0 fs-4">Giờ học linh hoạt</h3>
-						<p>Paragraph of text beneath the heading to explain the heading.</p>
+						<p>Các bài giảng được dựng sẵn nên bạn hoàn toàn có thể học vào bất cứ lúc nào </p>
 					</div>
 				</div>
 				<div className="col d-flex align-items-start">
-					<svg className="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlinkHref="#speedometer2"/></svg>
+					<IconChat width="1.75em" height="1.75em" />
 					<div>
-						<h3 className="fw-bold mb-0 fs-4">Hỗ trợ trực tiếp</h3>
-						<p>Paragraph of text beneath the heading to explain the heading.</p>
+						<h3 className="fw-bold mb-0 fs-4">Chat support 1-1</h3>
+						<p>Khi gặp bất cứ vấn đề gì khó hiểu về bài giảng cũng như bài tập, mình sẽ support trực tiếp qua các công cụ chat như Discord, Telegram,... </p>
 					</div>
 				</div>
 				<div className="col d-flex align-items-start">
-					<svg className="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlinkHref="#toggles2"/></svg>
+					<IconMoney width="1.75em" height="1.75em" />
 					<div>
 						<h3 className="fw-bold mb-0 fs-4">Chi phí tối ưu</h3>
-						<p>Paragraph of text beneath the heading to explain the heading.</p>
+						<p>Học phí cực kỳ vừa phải với mức giá sinh viên, nhưng chất lượng đáp ứng đủ để đi làm</p>
 					</div>
 				</div>
 				<div className="col d-flex align-items-start">
-					<svg className="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlinkHref="#geo-fill"/></svg>
+					<IconBookmarkHeart width="1.75em" height="1.75em" />
 					<div>
-						<h3 className="fw-bold mb-0 fs-4">Featured title</h3>
-						<p>Paragraph of text beneath the heading to explain the heading.</p>
+						<h3 className="fw-bold mb-0 fs-4">Học trọn đời</h3>
+						<p>Bạn sẽ sở hữu khoá học cũng như support trọn đời</p>
 					</div>
 				</div>
 				<div className="col d-flex align-items-start">
-					<svg className="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlinkHref="#tools"/></svg>
+					<IconTool width="1.75em" height="1.75em" />
 					<div>
-						<h3 className="fw-bold mb-0 fs-4">Featured title</h3>
-						<p>Paragraph of text beneath the heading to explain the heading.</p>
+						<h3 className="fw-bold mb-0 fs-4">Update liên tục</h3>
+						<p>Khoá học sẽ luôn update kịp thời những phiên bản mới nhất</p>
 					</div>
 				</div>
-			</div>
-		</div>
-	
-		<div className="container-fluid bg-dark text-white">
-			<div className="container">
-				<footer className="py-5">
-					<div className="row">
-					<div className="col-6 col-md-2 mb-3">
-						<h5>Dịch vụ</h5>
-						<ul className="nav flex-column">
-						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Đào tạo</a></li>
-						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Thiết kế web</a></li>
-						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Tư vấn</a></li>
-						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">FAQs</a></li>
-						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">About</a></li>
-						</ul>
-					</div>
-				
-					<div className="col-6 col-md-2 mb-3">
-						<h5>Untitled</h5>
-						<ul className="nav flex-column">
-						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Untitled</a></li>
-						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Untitled</a></li>
-						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Untitled</a></li>
-						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Untitled</a></li>
-						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Untitled</a></li>
-						</ul>
-					</div>
-				
-					<div className="col-6 col-md-2 mb-3">
-						<h5>Untitled</h5>
-						<ul className="nav flex-column">
-						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Untitled</a></li>
-						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Untitled</a></li>
-						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Untitled</a></li>
-						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Untitled</a></li>
-						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Untitled</a></li>
-						</ul>
-					</div>
-				
-					<div className="col-md-5 offset-md-1 mb-3">
-						<form>
-							<h5>Theo dõi để nhận tin tức mới nhất</h5>
-							<p>Cập nhật các khoá học mới qua email</p>
-							<div className="d-flex flex-column flex-sm-row w-100 gap-2">
-								<label for="newsletter1" className="visually-hidden">Email address</label>
-								<input id="newsletter1" type="text" className="form-control" placeholder="Email address"/>
-								<button className="btn btn-primary" type="button">Subscribe</button>
-							</div>
-						</form>
-					</div>
-					</div>
-				
-					<div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-					<p>&copy; 2023 - Thiết kế bởi Vũ Nguyễn Coder</p>
-					<ul className="list-unstyled d-flex">
-						<li className="ms-3"><a className="link-dark" href="#"><svg className="bi" width="24" height="24"><use xlinkHref="#twitter"/></svg></a></li>
-						<li className="ms-3"><a className="link-dark" href="#"><svg className="bi" width="24" height="24"><use xlinkHref="#instagram"/></svg></a></li>
-						<li className="ms-3"><a className="link-dark" href="#"><svg className="bi" width="24" height="24"><use xlinkHref="#facebook"/></svg></a></li>
-					</ul>
-					</div>
-				</footer>
 			</div>
 		</div>
 	</div>)

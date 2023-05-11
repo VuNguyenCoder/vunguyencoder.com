@@ -16,6 +16,15 @@
     height: 60px;
 }
 
+.course-container {
+	position: relative;
+	.course-priority {
+		position: absolute;
+		left: 50%;
+		transform: translate(10px);
+	}
+}
+
 /*
 @include media-breakpoint-up(md) { 
     .course-icon {

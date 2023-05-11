@@ -16,6 +16,8 @@ import DatabaseCourse from './pages/courses/CourseDatabase'
 
 import logo from './VuNguyenCoder_Logo.png'
 
+import { IconBookmarkHeart, IconBox, IconChat, IconClock, IconFacebook, IconGear, IconInstagram, IconLinkedIn, IconMoney, IconQuestion, IconTiktok, IconTool, IconYoutube } from './components/icons';
+
 function App() {
 	return(	
 		<div>
@@ -231,6 +233,85 @@ function App() {
 							<Maintainance title='Giới thiệu về Vũ Nguyễn Coder'/>
 						</Route>
 					</Switch>
+				</div>
+				<div className="container-fluid bg-dark text-white">
+					<div className="container">
+						<footer className="py-5">
+							<div className="row">
+								<div className="col-6 col-md-2 mb-3">
+									<h5>Dịch vụ</h5>
+									<ul className="nav flex-column">
+									<li className="nav-item mb-2"><a className="nav-link p-0 text-muted">Outsource</a></li>
+									<li className="nav-item mb-2"><a className="nav-link p-0 text-muted">Thiết kế</a></li>
+									<li className="nav-item mb-2"><a className="nav-link p-0 text-muted">Tư vấn</a></li>
+									<li className="nav-item mb-2"><a className="nav-link p-0 text-muted">Tuyển dụng</a></li>
+									<li className="nav-item mb-2"><a className="nav-link p-0 text-muted">Truyền thông</a></li>
+									</ul>
+								</div>
+							
+								<div className="col-6 col-md-2 mb-3">
+									<h5>Đào tạo</h5>
+									<ul className="nav flex-column">
+									<li className="nav-item mb-2"><a className="nav-link p-0 text-muted">Roadmap</a></li>
+									<li className="nav-item mb-2"><a className="nav-link p-0 text-muted">Khoá học cơ bản</a></li>
+									<li className="nav-item mb-2"><a className="nav-link p-0 text-muted">Khoá học nâng cao</a></li>
+									</ul>
+								</div>
+							
+								<div className="col-6 col-md-2 mb-3">
+									<h5>Giới thiệu</h5>
+									<ul className="nav flex-column">
+									<li className="nav-item mb-2"><a className="nav-link p-0 text-muted">Tiểu sử</a></li>
+									<li className="nav-item mb-2"><a className="nav-link p-0 text-muted">Mạng xã hội</a></li>
+									<li className="nav-item mb-2"><a className="nav-link p-0 text-muted">Liên hệ</a></li>
+									</ul>
+								</div>
+							
+								<div className="col-md-5 offset-md-1 mb-3">
+									<form>
+										<h5>Theo dõi để nhận tin tức mới nhất</h5>
+										<p>Cập nhật các khoá học mới qua email</p>
+										<div className="d-flex flex-column flex-sm-row w-100 gap-2">
+											<label for="newsletter1" className="visually-hidden">Email address</label>
+											<input id="newsletter1" type="text" className="form-control" placeholder="Email address"/>
+											<button className="btn btn-primary" type="button">Subscribe</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						
+							<div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+							<p>&copy; 2023 - Designed by Vunguyencoder</p>
+							<ul className="list-unstyled d-flex">
+								<li className="ms-3">
+									<a className="" href="https://facebook.com/VuNguyenCoder">
+										<IconFacebook width="24" height="24" style={{fill: "white"}} />
+									</a>
+								</li>
+								<li className="ms-3">
+									<a className="" href="https://youtube.com/VuNguyenCoder">
+										<IconYoutube width="24" height="24" style={{fill: "white"}} />
+									</a>
+								</li>
+								<li className="ms-3">
+									<a className="" href="https://tiktok.com/@vunguyencoder">
+										<IconTiktok width="24" height="24" style={{fill: "white"}} />
+									</a>
+								</li>
+								<li className="ms-3">
+									<a className="" href="https://instagram.com/VuNguyenCoder">
+										<IconInstagram width="24" height="24" style={{fill: "white"}} />
+									</a>
+								</li>
+								<li className="ms-3">
+									<a className="" href="https://linkedin.com/in/VuNguyenCoder">
+										<IconLinkedIn width="24" height="24" style={{fill: "white"}} />
+									</a>
+								</li>
+							</ul>
+							</div>
+						</footer>
+					</div>
 				</div>
 			</BrowserRouter>
 		</div>
