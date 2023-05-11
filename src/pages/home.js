@@ -1,10 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './home.scss'
 import { Container, Row, Col } from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-import Popover from 'react-bootstrap/Popover';
-import Tooltip from 'react-bootstrap/Tooltip';
 import { IconBookmarkHeart, IconBox, IconChat, IconClock, IconFacebook, IconGear, IconInstagram, IconLinkedIn, IconMoney, IconQuestion, IconTiktok, IconTool, IconYoutube } from '../components/icons';
 
 let goToRoadMap = () => {
@@ -17,7 +13,7 @@ function ContentCourse(props) {
 			<a href={props.href}>    
 				<img src={"img/" + props.imgFilename} className="course-icon"/>
 			</a>
-			<span class={"badge rounded-circle small course-priority " + (props.optional ? "bg-success" : "bg-danger")}>
+			<span class={"badge rounded-circle small course-priority text-white " + (props.optional ? "bg-success" : "bg-danger")}>
 				✔
 			</span>
 		</div>
