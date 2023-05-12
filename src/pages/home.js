@@ -13,7 +13,8 @@ function ContentCourse(props) {
 			<a href={props.href}>    
 				<img src={"img/" + props.imgFilename} className="course-icon"/>
 			</a>
-			<span class={"badge rounded-circle small course-priority text-white " + (props.optional ? "bg-success" : "bg-danger")}>
+			<span class={"badge rounded-circle small course-priority " + (props.optional ? "bg-success" : "bg-danger")} 
+					style={{color: "white"}}>
 				✔
 			</span>
 		</div>
