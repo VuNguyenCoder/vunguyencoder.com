@@ -13,8 +13,8 @@ function ContentCourse(props) {
 			<a href={props.href}>    
 				<img src={"img/" + props.imgFilename} className="course-icon"/>
 			</a>
-			<span class="small course-priority" style={{backgroundColor: (props.optional ? "green" : "red")}} >
-				✔
+			<span class="fw-bold fs-6 course-priority " style={{backgroundColor: (props.optional ? "green" : "red")}} >
+				✓
 			</span>
 		</div>
 		<div className={"course-name " + (props.opened ? "fw-bold" : "fw-normal fst-italic")}>{props.title}</div>
@@ -63,19 +63,19 @@ export default function Home() {
 			</div>
 		</Container>
 		
-		<div id="roadmap" className="m-5" style={{scrollMarginTop: '60px'}}>
+		<div id="roadmap" className="m-5 p-5" style={{scrollMarginTop: '60px'}}>
 			<div className="display-2 fw-bold text-center">Roadmap</div>
 			<div class="small fw-bold">Học phần in đậm: đang hoạt động</div>
 			<div class="small fst-italic">Học phần in nghiêng : chưa hoạt động</div>
 			<div>
 				<span class="badge rounded-circle small course-priority bg-danger text-white">
-					✔
+					✓
 				</span> 
 				<span> : học phần bắt buộc</span>
 			</div>
 			<div>
 				<span class="badge rounded-circle small course-priority bg-success text-white">
-					✔
+					✓
 				</span> 
 				<span> : học phần tùy chọn</span>
 			</div>
@@ -157,9 +157,6 @@ export default function Home() {
 							<ContentCourse href="#" imgFilename="icon/php.png" title="PHP" optional />	         
 						</Col>
 						<Col>
-							<ContentCourse href="#" imgFilename="icon/ruby.png" title="Ruby" optional />	         
-						</Col>
-						<Col>
 							<ContentCourse href="#" imgFilename="icon/golang.png" title="Golang" optional />	         
 						</Col>
 					</Row>    
@@ -204,10 +201,22 @@ export default function Home() {
 					</Row>
 					<Row className="border border-primary border-2" style={{borderRadius: '20px'}}>
 						<Col>
-							<ContentCourse href="#" imgFilename="icon/react.png" title="React" subtitle="Web/Mobile"/>	         
+							<ContentCourse href="#" imgFilename="icon/react.png" title="ReactJS" subtitle="Web"/>	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/reactnative.png" title="React Native" subtitle="Mobile"/>	         
 						</Col>
 						<Col>
 							<ContentCourse href="#" imgFilename="icon/flutter.png" title="Flutter" subtitle="Mobile" optional />	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/react.png" title="Next.js" optional/>	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/electron.png" title="Electron" subtitle="Dekstop" optional />	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/ionic.png" title="Ionic" subtitle="Hybrid" optional />	         
 						</Col>
 						<Col>
 							<ContentCourse href="#" imgFilename="icon/qt.png" title="Qt" subtitle="Desktop/Mobile" optional/>	         
@@ -223,10 +232,13 @@ export default function Home() {
 					</Row>
 					<Row className="border border-primary border-2" style={{borderRadius: '20px'}}>
 						<Col>
-							<ContentCourse href="#" imgFilename="icon/express.png" title="Express.js" subtitle="Web service"/>	         
+							<ContentCourse href="#" imgFilename="icon/nginx.png" title="Nginx" subtitle="Web server"/>	         
 						</Col>
 						<Col>
 							<ContentCourse href="#" imgFilename="icon/flask.png" title="Flask" subtitle="Web service" />	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/express.png" title="Express.js" subtitle="Web service"/>	         
 						</Col>
 						<Col>
 							<ContentCourse href="#" imgFilename="icon/gin.png" title="Gin" subtitle="Web service" optional />	      
@@ -274,6 +286,9 @@ export default function Home() {
 							<ContentCourse href="#" imgFilename="icon/aws.png" title="AWS" subtitle="Cloud computing"/>	         
 						</Col>
 						<Col>
+							<ContentCourse href="#" imgFilename="icon/solana.png" title="Solana" subtitle="Web3" optional/>	         
+						</Col>
+						<Col>
 							<ContentCourse href="#" imgFilename="icon/ansible.png" title="Ansible" subtitle="Configuration automation"/>	         
 						</Col>
 						<Col>
@@ -296,6 +311,12 @@ export default function Home() {
 					</Row>
 					<Row className="border border-primary border-2" style={{borderRadius: '20px'}}>
 						<Col>
+							<ContentCourse href="#" imgFilename="icon/webassembly.png" title="Web Assembly"/>	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/typescript.png" title="Typescript"/>	         
+						</Col>
+						<Col>
 							<ContentCourse href="#" imgFilename="icon/lua.png" title="Lua" optional />	         
 						</Col>
 						<Col>
@@ -306,6 +327,9 @@ export default function Home() {
 						</Col>
 						<Col>
 							<ContentCourse href="#" imgFilename="icon/rust.png" title="Rust" optional />	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/ruby.png" title="Ruby" optional />	         
 						</Col>
 					</Row>    
 				</Col>
