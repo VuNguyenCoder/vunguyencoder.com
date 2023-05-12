@@ -13,8 +13,7 @@ function ContentCourse(props) {
 			<a href={props.href}>    
 				<img src={"img/" + props.imgFilename} className="course-icon"/>
 			</a>
-			<span class={"badge rounded-circle small course-priority " + (props.optional ? "bg-success" : "bg-danger")} 
-					style={{color: "white"}}>
+			<span class="small course-priority" style={{backgroundColor: (props.optional ? "green" : "red")}} >
 				✔
 			</span>
 		</div>
@@ -66,16 +65,16 @@ export default function Home() {
 		
 		<div id="roadmap" className="m-5" style={{scrollMarginTop: '60px'}}>
 			<div className="display-2 fw-bold text-center">Roadmap</div>
-			<div class="small fw-bold">Các học phần in đậm: đang hoạt động</div>
-			<div class="small fst-italic">Các học phần in nghiêng : chưa hoạt động</div>
+			<div class="small fw-bold">Học phần in đậm: đang hoạt động</div>
+			<div class="small fst-italic">Học phần in nghiêng : chưa hoạt động</div>
 			<div>
-				<span class="badge rounded-circle small course-priority bg-danger">
+				<span class="badge rounded-circle small course-priority bg-danger text-white">
 					✔
 				</span> 
 				<span> : học phần bắt buộc</span>
 			</div>
 			<div>
-				<span class="badge rounded-circle small course-priority bg-success">
+				<span class="badge rounded-circle small course-priority bg-success text-white">
 					✔
 				</span> 
 				<span> : học phần tùy chọn</span>

@@ -19,6 +19,13 @@
 .course-container {
 	position: relative;
 	.course-priority {
+		color: white;
+		text-shadow: 2px 2px 4px #000000;
+		border-radius: 50%;
+		border-color: gainsboro;
+		border-width: 1px;
+		border-style: solid;
+		padding: 0px 8px;
 		position: absolute;
 		left: 50%;
 		transform: translate(10px);
