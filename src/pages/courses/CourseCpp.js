@@ -31,8 +31,8 @@ export default function BasicCppCourse()
 					<div className="col col-lg-5">
 						<ul className="list-group">
 							<li className="list-group-item d-flex justify-content-center">
-								<img src="/img/logo/c.png" className="" width="64" height="64" />
-								<img src="/img/logo/cpp.png" className="" width="64" height="64" />
+								<img src="/img/icon/c.png" className="" width="64" height="64" />
+								<img src="/img/icon/cpp.png" className="" width="64" height="64" />
 							</li>	
 							<li className="list-group-item d-flex justify-content-between align-items-start">
 								<div className="ms-2">Học phí</div>
@@ -219,6 +219,13 @@ export default function BasicCppCourse()
 							<div className="alert alert-danger" role="alert">
 								<IconDangerAlert width="24" height="24" />
 								<span className='ms-3'>Lưu ý: Chỉ chấp nhận tham gia với một tài khoản facebook duy nhất</span>	
+							</div>	
+						</Container>
+						<hr />
+						<h1 className="display-6 mt-4 mt-lg-0">Bước 3: Xem hướng dẫn cách học</h1>
+						<Container className="justify-content-center lead">
+							<div className='lead mb-3'>Xem bài được ghim ở đầu group để được hướng dẫn cách học.
+								Chú ý add nick telegram hoặc discord để được support trong quá trình học 
 							</div>	
 						</Container>
 						<hr className='d-lg-none' />

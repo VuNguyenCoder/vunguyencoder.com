@@ -13,6 +13,8 @@ import BasicsJavascriptCourse from './pages/courses/CourseJavascript'
 import HTMLCourse from './pages/courses/CourseHTML'
 import CSSCourse from './pages/courses/CourseCSS'
 import DatabaseCourse from './pages/courses/CourseDatabase'
+import AlgoCourse from './pages/courses/CourseAlgo'
+import DataStructureCourse from './pages/courses/CourseDataStructure'
 
 import logo from './VuNguyenCoder_Logo.png'
 
@@ -172,6 +174,14 @@ function App() {
 							<OOPCppCourse/>
 						</Route>
 
+						<Route path="/courses/algorithm">
+							<AlgoCourse />
+						</Route>
+						
+						<Route path="/courses/datastructure">
+							<DataStructureCourse />
+						</Route>
+
 						<Route path="/courses/oop-java">
 							<Maintainance title='Khóa học lập trình hướng đối tượng Java'/>	
 						</Route>
@@ -234,7 +244,7 @@ function App() {
 						</Route>
 					</Switch>
 				</div>
-				<div className="container-fluid bg-dark text-white">
+				<div className="container-fluid bg-dark text-white sticky-bottom">
 					<div className="container">
 						<footer className="py-5">
 							<div className="row">

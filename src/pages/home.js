@@ -83,7 +83,7 @@ export default function Home() {
 		<HeaderPhase>Phase 1: Nhập môn</HeaderPhase>
 		<Container className="border border-primary border-1 mx-auto" style={{width: '90%', borderRadius: '20px'}}>
 			<Row className="mx-4 mb-4 g-5">
-				<Col xs={12} md={4} className="text-center">
+				<Col xs={12} md={2} className="text-center">
 					<Row>
 						<Col className="text-center lead">&nbsp;</Col>
 					</Row>
@@ -93,7 +93,7 @@ export default function Home() {
 						</Col>
 					</Row>    
 				</Col>
-				<Col xs={12} md={8} className="text-center">
+				<Col xs={12} md={6} className="text-center">
 					<Row>
 						<Col className="text-center lead">Programing language</Col>
 					</Row>
@@ -104,13 +104,29 @@ export default function Home() {
 						<Col>
 							<ContentCourse href="/courses/basics-python" imgFilename="icon/python.png" title="Python" opened />	         
 						</Col>
+						<Col>
+							<ContentCourse href="/courses/basics-javascript" imgFilename="icon/javascript.png" title="Javascript" opened />
+						</Col>
 					</Row>    
 				</Col>
 				
+				<Col xs={12} md={4} className="text-center">
+					<Row>
+						<Col className="text-center lead">Markup language</Col>
+					</Row>
+					<Row className="border border-primary border-2" style={{borderRadius: '20px'}}>
+						<Col>
+							<ContentCourse href="/courses/html" imgFilename="icon/html.png" title="HTML" opened/>	         
+						</Col>
+						<Col>
+							<ContentCourse href="/courses/css" imgFilename="icon/css.png" title="CSS" opened/>	         
+						</Col>
+					</Row>    
+				</Col>
 			</Row>
 		</Container>
 		<Arrow />
-		<HeaderPhase>Phase 2: Xây dựng nền tảng</HeaderPhase>
+		<HeaderPhase>Phase 2: Tư duy</HeaderPhase>
 		<Container className="border border-primary border-1 mx-auto" style={{width: '90%', borderRadius: '20px'}}>
 			<Row className="mx-4 mb-4 g-5">
 				<Col className="text-center">
@@ -119,13 +135,16 @@ export default function Home() {
 					</Row>
 					<Row className="" style={{borderRadius: '20px'}}>
 						<Col>
-							<ContentCourse href="/courses/oop-cpp" imgFilename="icon/oop_cpp.png" title="Hướng đối tượng" opened/>	         
-						</Col>
-						<Col>
-							<ContentCourse href="#" imgFilename="icon/dsa.png" title="Cấu trúc dữ liệu & giải thuật" />	         
-						</Col>
-						<Col>
 							<ContentCourse href="/courses/database" imgFilename="icon/database.png" title="Cơ sở dữ liệu" opened />	         
+						</Col>
+						<Col>
+							<ContentCourse href="/courses/oop-cpp" imgFilename="icon/oop_cpp.png" title="Lập trình hướng đối tượng" opened/>	         
+						</Col>
+						<Col>
+							<ContentCourse href="/courses/algorithm" imgFilename="icon/algo.png" title="Thuật toán" opened/>	         
+						</Col>
+						<Col>
+							<ContentCourse href="/courses/datastructure" imgFilename="icon/datastructure.png" title="Cấu trúc dữ liệu" opened/>	         
 						</Col>
 					</Row>    
 				</Col>	
@@ -141,9 +160,6 @@ export default function Home() {
 						<div className="col text-center text-muted lead">Programing language</div>
 					</Row>
 					<Row className="border border-primary border-2 rounded-4" style={{borderRadius: '20px'}}>
-						<Col>
-							<ContentCourse href="/courses/basics-javascript" imgFilename="icon/javascript.png" title="Javascript" opened />
-						</Col>
 						<Col>
 							<ContentCourse href="#" imgFilename="icon/cpp.png" title="C++ (Advanced)" />	         
 						</Col>
@@ -161,19 +177,6 @@ export default function Home() {
 						</Col>
 					</Row>    
 				</div>
-				<Col xs={12} md={6} className="text-center">
-					<Row>
-						<Col className="text-center lead">Markup language</Col>
-					</Row>
-					<Row className="border border-primary border-2" style={{borderRadius: '20px'}}>
-						<Col>
-							<ContentCourse href="/courses/html" imgFilename="icon/html.png" title="HTML" opened/>	         
-						</Col>
-						<Col>
-							<ContentCourse href="/courses/css" imgFilename="icon/css.png" title="CSS" opened/>	         
-						</Col>
-					</Row>    
-				</Col>
 				<div className="col-12 col-md-6 text-center">
 					<div className="row">
 						<div className="col text-center text-muted lead">&nbsp;</div>
