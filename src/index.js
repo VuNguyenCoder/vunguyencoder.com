@@ -36,27 +36,23 @@ function App() {
 						<Nav className="ms-auto" style={{padding: '7px'}}>
 							<NavDropdown title='Khóa học nền tảng' >
 								<NavDropdown.Item as={Link} to={"/courses/basics-cpp"}>
-									Lập trình cơ bản (C/C++)
+									Lập trình cơ bản - C/C++
 								</NavDropdown.Item>
 								
 								<NavDropdown.Item as={Link} to={"/courses/basics-python"}>
-									Lập trình cơ bản (Python)
+									Lập trình cơ bản - Python
 								</NavDropdown.Item>
 
 								<NavDropdown.Item as={Link} to={"/courses/basics-javascript"}>
-									Lập trình cơ bản (Javascript)
+									Lập trình cơ bản - Javascript
 								</NavDropdown.Item>
 
 								<NavDropdown.Divider />
 
 								<NavDropdown.Item as={Link} to={"/courses/oop-cpp"}>
-									Lập trình hướng đối tượng (C++)
+									Lập trình hướng đối tượng
 								</NavDropdown.Item>
 								
-								<NavDropdown.Item as={Link} to={"/courses/oop-java"}>
-									Lập trình hướng đối tượng (Java)
-								</NavDropdown.Item>
-
 								<NavDropdown.Divider />
 
 								<NavDropdown.Item as={Link} to={"/courses/html"}>
@@ -68,14 +64,24 @@ function App() {
 								</NavDropdown.Item>
 								<NavDropdown.Divider />
 
-								<NavDropdown.Item as={Link} to={"/courses/algorithm-and-data-structure"}>
-									Cấu trúc dữ liệu và giải thuật (C++)
+								<NavDropdown.Item as={Link} to={"/courses/algorithm"}>
+									Thuật toán
+								</NavDropdown.Item>
+
+								<NavDropdown.Item as={Link} to={"/courses/datastructure"}>
+									Cấu trúc dữ liệu
 								</NavDropdown.Item>
 								
 								<NavDropdown.Divider />
 								
-								<NavDropdown.Item as={Link} to={"/courses/master-cpp"}>
-									Lập trình chuyên sâu (C++)
+								<NavDropdown.Item as={Link} to={"/courses/database"}>
+									Cơ sở dữ liệu
+								</NavDropdown.Item>
+								<NavDropdown.Item as={Link} to={"/courses/networking"}>
+									Networking
+								</NavDropdown.Item>
+								<NavDropdown.Item as={Link} to={"/courses/linux"}>
+									Linux
 								</NavDropdown.Item>
 							</NavDropdown>
 
@@ -109,18 +115,6 @@ function App() {
 								</NavDropdown.Item>
 								<NavDropdown.Item as={Link} to={"/courses/web-backend-django"}>
 									Phát triển web backend (Django)
-								</NavDropdown.Item>
-							</NavDropdown>
-
-							<NavDropdown title='Khóa học Quản trị hệ thống'>
-								<NavDropdown.Item as={Link} to={"/courses/linux"}>
-									Quản trị hệ thống Linux
-								</NavDropdown.Item>
-								<NavDropdown.Item as={Link} to={"/courses/database"}>
-									Quản trị cơ sở dữ liệu
-								</NavDropdown.Item>
-								<NavDropdown.Item as={Link} to={"/courses/networking"}>
-									Quản trị mạng
 								</NavDropdown.Item>
 							</NavDropdown>
 

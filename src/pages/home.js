@@ -65,6 +65,7 @@ export default function Home() {
 		
 		<div id="roadmap" className="m-5 p-5" style={{scrollMarginTop: '60px'}}>
 			<div className="display-2 fw-bold text-center">Roadmap</div>
+			<div className="display-6 text-center text-muted">Click vào từng môn học để xem chi tiết</div>
 			<div class="small fw-bold">Học phần in đậm: đang hoạt động</div>
 			<div class="small fst-italic">Học phần in nghiêng : chưa hoạt động</div>
 			<div>
@@ -204,7 +205,7 @@ export default function Home() {
 					</Row>
 					<Row className="border border-primary border-2" style={{borderRadius: '20px'}}>
 						<Col>
-							<ContentCourse href="#" imgFilename="icon/react.png" title="ReactJS" subtitle="Web"/>	         
+							<ContentCourse href="#" imgFilename="icon/react.png" title="React" subtitle=""/>	         
 						</Col>
 						<Col>
 							<ContentCourse href="#" imgFilename="icon/reactnative.png" title="React Native" subtitle="Mobile"/>	         
@@ -213,7 +214,7 @@ export default function Home() {
 							<ContentCourse href="#" imgFilename="icon/flutter.png" title="Flutter" subtitle="Mobile" optional />	         
 						</Col>
 						<Col>
-							<ContentCourse href="#" imgFilename="icon/react.png" title="Next.js" optional/>	         
+							<ContentCourse href="#" imgFilename="icon/react.png" title="Next.js" subtitle="Web framework" optional/>	         
 						</Col>
 						<Col>
 							<ContentCourse href="#" imgFilename="icon/electron.png" title="Electron" subtitle="Dekstop" optional />	         
@@ -274,13 +275,13 @@ export default function Home() {
 					</Row>
 					<Row className="border border-primary border-2" style={{borderRadius: '20px'}}>
 						<Col>
+							<ContentCourse href="#" imgFilename="icon/git.png" title="Git" subtitle="Version control"/>	         
+						</Col>
+						<Col>
 							<ContentCourse href="#" imgFilename="icon/virtualbox.png" title="Virtual box" subtitle="Virtualization" />	         
 						</Col>
 						<Col>
 							<ContentCourse href="#" imgFilename="icon/docker.png" title="Docker" subtitle="Containerization" />	         
-						</Col>
-						<Col>
-							<ContentCourse href="#" imgFilename="icon/vagrant.png" title="Vagrant" optional />	         
 						</Col>
 						<Col>
 							<ContentCourse href="#" imgFilename="icon/kurbernetes.png" title="Kubernates" subtitle="Container orchestration"/>
@@ -295,6 +296,9 @@ export default function Home() {
 							<ContentCourse href="#" imgFilename="icon/ansible.png" title="Ansible" subtitle="Configuration automation"/>	         
 						</Col>
 						<Col>
+							<ContentCourse href="#" imgFilename="icon/vagrant.png" title="Vagrant" subtitle="Infrastructure as code" optional />	         
+						</Col>
+						<Col>
 							<ContentCourse href="#" imgFilename="icon/terraform.png" title="Terraform" subtitle="Infrastructure as code"/>	         
 						</Col>
 						<Col>
@@ -303,14 +307,11 @@ export default function Home() {
 						<Col>
 							<ContentCourse href="#" imgFilename="icon/prometheus.png" title="Prometheus" subtitle="Monitoring" optional/>	         
 						</Col>
-						<Col>
-							<ContentCourse href="#" imgFilename="icon/git.png" title="Git" subtitle="Version control"/>	         
-						</Col>
 					</Row>    
 				</Col>
 				<Col xs={12} md={4} className="text-center">
 					<Row>
-						<Col className="text-center lead">Programing language</Col>
+						<Col className="text-center lead">Additional programing language</Col>
 					</Row>
 					<Row className="border border-primary border-2" style={{borderRadius: '20px'}}>
 						<Col>

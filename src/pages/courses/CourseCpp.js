@@ -36,7 +36,7 @@ export default function BasicCppCourse()
 							</li>	
 							<li className="list-group-item d-flex justify-content-between align-items-start">
 								<div className="ms-2">Học phí</div>
-								<h3><span className="badge bg-secondary rounded-pill">399k VNĐ</span></h3>
+								<h3><span className="badge bg-secondary rounded-pill">499k VNĐ</span></h3>
 								
 							</li>
 							<li className="list-group-item d-flex justify-content-between align-items-start">
