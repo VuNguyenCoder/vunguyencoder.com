@@ -15,6 +15,7 @@ import CSSCourse from './pages/courses/CourseCSS'
 import DatabaseCourse from './pages/courses/CourseDatabase'
 import AlgoCourse from './pages/courses/CourseAlgo'
 import DataStructureCourse from './pages/courses/CourseDataStructure'
+import JavaCourse from './pages/courses/CourseJava'
 
 import logo from './VuNguyenCoder_Logo.png'
 
@@ -34,90 +35,6 @@ function App() {
 
 					<Navbar.Collapse>
 						<Nav className="ms-auto" style={{padding: '7px'}}>
-							<NavDropdown title='Khóa học nền tảng' >
-								<NavDropdown.Item as={Link} to={"/courses/basics-cpp"}>
-									Lập trình cơ bản - C/C++
-								</NavDropdown.Item>
-								
-								<NavDropdown.Item as={Link} to={"/courses/basics-python"}>
-									Lập trình cơ bản - Python
-								</NavDropdown.Item>
-
-								<NavDropdown.Item as={Link} to={"/courses/basics-javascript"}>
-									Lập trình cơ bản - Javascript
-								</NavDropdown.Item>
-
-								<NavDropdown.Divider />
-
-								<NavDropdown.Item as={Link} to={"/courses/oop-cpp"}>
-									Lập trình hướng đối tượng
-								</NavDropdown.Item>
-								
-								<NavDropdown.Divider />
-
-								<NavDropdown.Item as={Link} to={"/courses/html"}>
-									HTML
-								</NavDropdown.Item>
-								
-								<NavDropdown.Item as={Link} to={"/courses/css"}>
-									CSS 
-								</NavDropdown.Item>
-								<NavDropdown.Divider />
-
-								<NavDropdown.Item as={Link} to={"/courses/algorithm"}>
-									Thuật toán
-								</NavDropdown.Item>
-
-								<NavDropdown.Item as={Link} to={"/courses/datastructure"}>
-									Cấu trúc dữ liệu
-								</NavDropdown.Item>
-								
-								<NavDropdown.Divider />
-								
-								<NavDropdown.Item as={Link} to={"/courses/database"}>
-									Cơ sở dữ liệu
-								</NavDropdown.Item>
-								<NavDropdown.Item as={Link} to={"/courses/networking"}>
-									Networking
-								</NavDropdown.Item>
-								<NavDropdown.Item as={Link} to={"/courses/linux"}>
-									Linux
-								</NavDropdown.Item>
-							</NavDropdown>
-
-							<NavDropdown title='Khóa học Desktop App'>
-								<NavDropdown.Item as={Link} to={"/courses/desktop-qt"}>
-									Lập trình ứng dụng (Qt)
-								</NavDropdown.Item>
-								<NavDropdown.Item as={Link} to={"/courses/desktop-opengl"}>
-									Lập trình đồ họa/Game (OpenGL)
-								</NavDropdown.Item>
-								<NavDropdown.Item as={Link} to={"/courses/desktop-javafx"}>
-									Lập trình ứng dụng (JavaFx)
-								</NavDropdown.Item>
-								<NavDropdown.Item as={Link} to={"/courses/desktop-reactnative"}>
-									Lập trình ứng dụng (React Native)
-								</NavDropdown.Item>
-								<NavDropdown.Item as={Link} to={"/courses/desktop-dotnet"}>
-									Lập trình ứng dụng (.NET)
-								</NavDropdown.Item>
-							</NavDropdown>
-
-							<NavDropdown title='Khóa học Web App'>
-								<NavDropdown.Item as={Link} to={"/courses/web-fundamental"}>
-									Nguyên lý phát triển ứng dụng web
-								</NavDropdown.Item>
-								<NavDropdown.Item as={Link} to={"/courses/web-frontend-react"}>
-									Phát triển web frontend (React)
-								</NavDropdown.Item>
-								<NavDropdown.Item as={Link} to={"/courses/web-backend-express"}>
-									Phát triển web backend (Express)
-								</NavDropdown.Item>
-								<NavDropdown.Item as={Link} to={"/courses/web-backend-django"}>
-									Phát triển web backend (Django)
-								</NavDropdown.Item>
-							</NavDropdown>
-
 							<NavDropdown title='Kết nối'>
 								<NavDropdown.Item as="a" href="https://facebook.com/VuNguyenCoder" target="_blank">
 									Facebook
@@ -150,6 +67,10 @@ function App() {
 
 						<Route path="/courses/basics-javascript">
 							<BasicsJavascriptCourse/>	
+						</Route>
+						
+						<Route path="/courses/java">
+							<JavaCourse/>	
 						</Route>
 						
 						<Route path="/courses/html">

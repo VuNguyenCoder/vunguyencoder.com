@@ -53,10 +53,10 @@ export default function Home() {
 					</div>
 					<div className="col-lg-6">
 						<h1 className="display-5 fw-bold lh-1 mb-3">Học lập trình cùng Vũ Nguyễn Coder</h1>
-						<p className="lead">Xin chào các anh em, mình là Vũ Nguyễn Coder. Sau nhiều năm lăn lộn trong ngành, mình đã xây dựng được một hệ thống các khoá học lập trình với mục tiêu cung cấp các kiến thức cốt lõi và nền tảng nhất dành cho những anh em đang mong muốn trở thành Software Engineer</p>
+						<p className="lead">Xin chào các anh em, mình là Vũ Nguyễn Coder. Sau nhiều năm làm việc dưới nhiều vai trò trong ngành IT, mình đã đúc rút xây dựng được một hệ thống các nội dung kiến thức cốt lõi và nền tảng nhất để trở thành Software Engineer</p>
 						<div className="d-grid gap-2 d-md-flex justify-content-md-start">
 							<button type="button" className="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold" onClick={goToRoadMap}>Xem lộ trình</button>
-							<button type="button" className="btn btn-outline-light btn-lg px-4">Đăng ký học</button>
+							<button type="button" className="btn btn-outline-light btn-lg px-4" onClick={goToRoadMap}>Đăng ký học</button>
 						</div>
 					</div>
 				</div>
@@ -72,7 +72,7 @@ export default function Home() {
 				<span class="badge rounded-circle small course-priority bg-danger text-white">
 					✓
 				</span> 
-				<span> : học phần bắt buộc</span>
+				<span> : học phần nên học</span>
 			</div>
 			<div>
 				<span class="badge rounded-circle small course-priority bg-success text-white">
@@ -108,12 +108,18 @@ export default function Home() {
 						<Col>
 							<ContentCourse href="/courses/basics-javascript" imgFilename="icon/javascript.png" title="Javascript" opened />
 						</Col>
+						<Col>
+							<ContentCourse href="/courses/java" imgFilename="icon/java.png" title="Java" optional opened/>	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/c-sharp.png" title="C#" optional/>	         
+						</Col>
 					</Row>    
 				</Col>
 				
 				<Col xs={12} md={4} className="text-center">
 					<Row>
-						<Col className="text-center lead">Markup language</Col>
+						<Col className="text-center lead">Markup & Style language</Col>
 					</Row>
 					<Row className="border border-primary border-2" style={{borderRadius: '20px'}}>
 						<Col>
@@ -157,28 +163,6 @@ export default function Home() {
 		<Container className="border border-primary border-1 mx-auto" style={{width: '90%', borderRadius: '20px'}}>
 			<Row className="mx-4 mb-4 g-5">
 				<div className="col-12 text-center">
-					<Row>
-						<div className="col text-center text-muted lead">Programing language</div>
-					</Row>
-					<Row className="border border-primary border-2 rounded-4" style={{borderRadius: '20px'}}>
-						<Col>
-							<ContentCourse href="#" imgFilename="icon/cpp.png" title="C++ (Advanced)" />	         
-						</Col>
-						<Col>
-							<ContentCourse href="#" imgFilename="icon/java.png" title="Java" />	         
-						</Col>
-						<Col>
-							<ContentCourse href="#" imgFilename="icon/c-sharp.png" title="C#" optional/>	         
-						</Col>
-						<Col>
-							<ContentCourse href="#" imgFilename="icon/php.png" title="PHP" optional />	         
-						</Col>
-						<Col>
-							<ContentCourse href="#" imgFilename="icon/golang.png" title="Golang" optional />	         
-						</Col>
-					</Row>    
-				</div>
-				<div className="col-12 col-md-6 text-center">
 					<div className="row">
 						<div className="col text-center text-muted lead">&nbsp;</div>
 					</div>
@@ -188,6 +172,15 @@ export default function Home() {
 						</Col>
 						<Col>
 							<ContentCourse href="#" imgFilename="icon/computer-networks.png" title="Networking" />	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/security.png" title="Security" />	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/computer-graphics.png" title="Computer Graphics" optional />	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/ai.png" title="AI" optional />	         
 						</Col>
 					</Row>    
 				</div>
@@ -199,34 +192,61 @@ export default function Home() {
 		<HeaderPhase>Phase 4: Chuyên môn hóa</HeaderPhase>
 		<Container className="border border-primary border-1" style={{width: '90%', borderRadius: '20px'}}>
 			<Row className="mx-4 mb-4 g-5">
+				<div className="col-12 text-center">
+					<Row>
+						<div className="col text-center text-muted lead">Programing language</div>
+					</Row>
+					<Row className="border border-primary border-2 rounded-4" style={{borderRadius: '20px'}}>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/swift.png" title="Swift" optional/>	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/golang.png" title="Golang" optional />	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/rust.png" title="Rust" optional />	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/php.png" title="PHP" optional />	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/cpp.png" title="C++ Advanced" />	         
+						</Col>
+					</Row>    
+				</div>
+			</Row>
+			<Row className="mx-4 mb-4 g-5">
 				<Col xs={12} md={6} className="text-center">
 					<Row>
 						<Col className="text-center lead">Front-end</Col>
 					</Row>
 					<Row className="border border-primary border-2" style={{borderRadius: '20px'}}>
 						<Col>
-							<ContentCourse href="#" imgFilename="icon/react.png" title="React" subtitle=""/>	         
+							<ContentCourse href="#" imgFilename="icon/react.png" title="React" subtitle="UI Library"/>	         
 						</Col>
 						<Col>
-							<ContentCourse href="#" imgFilename="icon/reactnative.png" title="React Native" subtitle="Mobile"/>	         
+							<ContentCourse href="#" imgFilename="icon/nextjs.png" title="Next.js" subtitle="Web framework"/>	         
 						</Col>
 						<Col>
-							<ContentCourse href="#" imgFilename="icon/flutter.png" title="Flutter" subtitle="Mobile" optional />	         
+							<ContentCourse href="#" imgFilename="icon/reactnative.png" title="React Native" subtitle="Cross-platform app"/>	         
 						</Col>
 						<Col>
-							<ContentCourse href="#" imgFilename="icon/react.png" title="Next.js" subtitle="Web framework" optional/>	         
+							<ContentCourse href="#" imgFilename="icon/flutter.png" title="Flutter" subtitle="Cross-platform app" optional />	         
 						</Col>
 						<Col>
-							<ContentCourse href="#" imgFilename="icon/electron.png" title="Electron" subtitle="Dekstop" optional />	         
+							<ContentCourse href="#" imgFilename="icon/electron.png" title="Electron" subtitle="Dekstop app" optional />	         
 						</Col>
 						<Col>
-							<ContentCourse href="#" imgFilename="icon/ionic.png" title="Ionic" subtitle="Hybrid" optional />	         
+							<ContentCourse href="#" imgFilename="icon/ionic.png" title="Ionic" subtitle="Cross-platform app" optional />	         
 						</Col>
 						<Col>
-							<ContentCourse href="#" imgFilename="icon/qt.png" title="Qt" subtitle="Desktop/Mobile" optional/>	         
+							<ContentCourse href="#" imgFilename="icon/swiftui.png" title="SwiftUI" subtitle="Apple app" />	         
 						</Col>
 						<Col>
-							<ContentCourse href="#" imgFilename="icon/textual.jpeg" title="Textual" subtitle="Console" optional />	         
+							<ContentCourse href="#" imgFilename="icon/qt.png" title="Qt" subtitle="Desktop/Mobile app" optional/>	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/textual.jpeg" title="Textual" subtitle="Console app" optional />	         
 						</Col>
 					</Row>    
 				</Col>
@@ -236,28 +256,40 @@ export default function Home() {
 					</Row>
 					<Row className="border border-primary border-2" style={{borderRadius: '20px'}}>
 						<Col>
+							<ContentCourse href="#" imgFilename="icon/flask.png" title="Flask" subtitle="Web framework" />	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/django.png" title="Django" subtitle="Web framework" />	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/express.png" title="Express.js" subtitle="Web framework"/>	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/gin.png" title="Gin" subtitle="Web framework" optional />	      
+						</Col>
+						<Col>
 							<ContentCourse href="#" imgFilename="icon/nginx.png" title="Nginx" subtitle="Web server"/>	         
 						</Col>
 						<Col>
-							<ContentCourse href="#" imgFilename="icon/flask.png" title="Flask" subtitle="Web service" />	         
+							<ContentCourse href="#" imgFilename="icon/postgresql.png" title="Postgresql" subtitle="Relational Database" />	      
 						</Col>
 						<Col>
-							<ContentCourse href="#" imgFilename="icon/express.png" title="Express.js" subtitle="Web service"/>	         
+							<ContentCourse href="#" imgFilename="icon/mongodb.svg" title="MongoDB" subtitle="Document Database" />	      
 						</Col>
 						<Col>
-							<ContentCourse href="#" imgFilename="icon/gin.png" title="Gin" subtitle="Web service" optional />	      
+							<ContentCourse href="#" imgFilename="icon/redis.png" title="Redis" subtitle="Key-Value Database" />	      
 						</Col>
 						<Col>
-							<ContentCourse href="#" imgFilename="icon/haproxy.png" title="HAProxy" subtitle="Load balancer" optional />	      
+							<ContentCourse href="#" imgFilename="icon/haproxy.png" title="HAProxy" subtitle="Load balancer" />	      
 						</Col>
 						<Col>
-							<ContentCourse href="#" imgFilename="icon/redis.png" title="Redis" subtitle="Cache" optional />	      
-						</Col>
-						<Col>
-							<ContentCourse href="#" imgFilename="icon/rabbitmq.png" title="RabbitMQ" subtitle="Message Broker" optional /> 
+							<ContentCourse href="#" imgFilename="icon/rabbitmq.png" title="RabbitMQ" subtitle="Message Broker" /> 
 						</Col>
 						<Col>
 							<ContentCourse href="#" imgFilename="icon/elastic.png" title="Elasticsearch" subtitle="Search engine" optional />	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/minio.png" title="MinIO" subtitle="Object Storage" optional />	         
 						</Col>
 					</Row>    
 				</Col>
@@ -269,56 +301,68 @@ export default function Home() {
 		<HeaderPhase>Phase 5: Mở rộng</HeaderPhase>
 		<Container className="border border-primary border-1" style={{width: '90%', borderRadius: '20px'}}>
 			<Row className="mx-4 mb-4 g-5">
-				<Col xs={12} md={8} className="text-center">
+				<Col xs={12} className="text-center">
 					<Row>
 						<Col className="text-center lead">DevOps</Col>
 					</Row>
 					<Row className="border border-primary border-2" style={{borderRadius: '20px'}}>
 						<Col>
-							<ContentCourse href="#" imgFilename="icon/git.png" title="Git" subtitle="Version control"/>	         
+							<ContentCourse href="#" imgFilename="icon/git.png" title="Git" subtitle="Version control" />	         
 						</Col>
 						<Col>
 							<ContentCourse href="#" imgFilename="icon/virtualbox.png" title="Virtual box" subtitle="Virtualization" />	         
 						</Col>
 						<Col>
+							<ContentCourse href="#" imgFilename="icon/proxmox.png" title="Proxmox" subtitle="Virtualization" />	         
+						</Col>
+						<Col>
 							<ContentCourse href="#" imgFilename="icon/docker.png" title="Docker" subtitle="Containerization" />	         
 						</Col>
 						<Col>
-							<ContentCourse href="#" imgFilename="icon/kurbernetes.png" title="Kubernates" subtitle="Container orchestration"/>
+							<ContentCourse href="#" imgFilename="icon/aws.png" title="AWS" subtitle="Cloud computing" />	         
 						</Col>
 						<Col>
-							<ContentCourse href="#" imgFilename="icon/aws.png" title="AWS" subtitle="Cloud computing"/>	         
+							<ContentCourse href="#" imgFilename="icon/openstack.png" title="OpenStack" subtitle="Cloud computing" />	         
 						</Col>
 						<Col>
 							<ContentCourse href="#" imgFilename="icon/solana.png" title="Solana" subtitle="Web3" optional/>	         
 						</Col>
 						<Col>
-							<ContentCourse href="#" imgFilename="icon/ansible.png" title="Ansible" subtitle="Configuration automation"/>	         
+							<ContentCourse href="#" imgFilename="icon/prometheus.png" title="Prometheus" subtitle="Monitoring" />	         
 						</Col>
 						<Col>
-							<ContentCourse href="#" imgFilename="icon/vagrant.png" title="Vagrant" subtitle="Infrastructure as code" optional />	         
+							<ContentCourse href="#" imgFilename="icon/grafana.png" title="Grafana" subtitle="Monitoring" />	         
 						</Col>
 						<Col>
-							<ContentCourse href="#" imgFilename="icon/terraform.png" title="Terraform" subtitle="Infrastructure as code"/>	         
+							<ContentCourse href="#" imgFilename="icon/grafana-loki.png" title="Grafana Loki" subtitle="Monitoring" />	         
 						</Col>
 						<Col>
 							<ContentCourse href="#" imgFilename="icon/jenkins.png" title="Jenkins" subtitle="CI/CD"/>	         
 						</Col>
 						<Col>
-							<ContentCourse href="#" imgFilename="icon/prometheus.png" title="Prometheus" subtitle="Monitoring" optional/>	         
+							<ContentCourse href="#" imgFilename="icon/vagrant.png" title="Vagrant" subtitle="Infrastructure as Code" optional />	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/terraform.png" title="Terraform" subtitle="Infrastructure as Code"/>	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/ansible.png" title="Ansible" subtitle="Infrastructure as Code" />	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/kurbernetes.png" title="Kubernetes" subtitle="Container orchestration" />
 						</Col>
 					</Row>    
 				</Col>
-				<Col xs={12} md={4} className="text-center">
+				<Col xs={12} md={8} className="text-center">
 					<Row>
-						<Col className="text-center lead">Additional programing language</Col>
+						<Col className="text-center lead">Programing language</Col>
 					</Row>
 					<Row className="border border-primary border-2" style={{borderRadius: '20px'}}>
 						<Col>
-							<ContentCourse href="#" imgFilename="icon/webassembly.png" title="Web Assembly"/>	         
+							<ContentCourse href="#" imgFilename="icon/typescript.png" title="Typescript" />	         
 						</Col>
 						<Col>
-							<ContentCourse href="#" imgFilename="icon/typescript.png" title="Typescript"/>	         
+							<ContentCourse href="#" imgFilename="icon/webassembly.png" title="Web Assembly" optional />	         
 						</Col>
 						<Col>
 							<ContentCourse href="#" imgFilename="icon/lua.png" title="Lua" optional />	         
@@ -330,10 +374,23 @@ export default function Home() {
 							<ContentCourse href="#" imgFilename="icon/haskell.png" title="Haskell" optional />	         
 						</Col>
 						<Col>
-							<ContentCourse href="#" imgFilename="icon/rust.png" title="Rust" optional />	         
+							<ContentCourse href="#" imgFilename="icon/ruby.png" title="Ruby" optional />	         
+						</Col>
+					</Row>    
+				</Col>
+				<Col xs={12} md={4} className="text-center">
+					<Row>
+						<Col className="text-center lead">Testing</Col>
+					</Row>
+					<Row className="border border-primary border-2" style={{borderRadius: '20px'}}>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/postman.svg" title="Postman" subtitle="API Test" />	         
 						</Col>
 						<Col>
-							<ContentCourse href="#" imgFilename="icon/ruby.png" title="Ruby" optional />	         
+							<ContentCourse href="#" imgFilename="icon/jmeter.png" title="JMeter" subtitle="Stress test" />	         
+						</Col>
+						<Col>
+							<ContentCourse href="#" imgFilename="icon/selenium.png" title="Selenium" subtitle="Automation Test" />	         
 						</Col>
 					</Row>    
 				</Col>
@@ -342,26 +399,7 @@ export default function Home() {
 
 		<Arrow/>
 
-		<HeaderPhase>Phase 6</HeaderPhase>
-		<Container style={{width: '90%'}}>
-			<Row>
-				<div className="col text-center lead">
-					Bổ trợ
-				</div>
-			</Row>
-			<Row className="border border-primary border-2" style={{borderRadius: '20px'}}>
-				<div className="col text-center">
-					<ContentCourse href="#" imgFilename="icon/ai.png" title="AI" optional />	         
-				</div>
-				<div className="col text-center">
-					<ContentCourse href="#" imgFilename="icon/data-visualization.png" title="Data Visulazation" optional />	         
-				</div>
-			</Row>
-		</Container>
-		
-		<Arrow/>
-
-		<HeaderPhase>To be continue... <br/>Học, học nữa, học mãi!<br/></HeaderPhase>
+		<HeaderPhase>To be continue... <br/>Học, học nữa, học mãi!<br/><br/><br/></HeaderPhase>
 		
 		<div className="bg-dark text-secondary px-4 py-5 text-center">
 			<div className="py-5">
@@ -377,8 +415,8 @@ export default function Home() {
 						là code máy móc theo 1 framework nào đó. 
 					</p>
 					<div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
-						<button type="button" className="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Xem lộ trình</button>
-						<button type="button" className="btn btn-outline-light btn-lg px-4">Đăng ký ngay</button>
+						<button type="button" className="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold" onClick={goToRoadMap}>Xem lộ trình</button>
+						<button type="button" className="btn btn-outline-light btn-lg px-4" onClick={goToRoadMap}>Đăng ký ngay</button>
 						</div>
 				</div>
 			</div>
@@ -471,6 +509,17 @@ export default function Home() {
 						<h3 className="fw-bold mb-0 fs-4">Update liên tục</h3>
 						<p>Khoá học sẽ luôn update kịp thời những phiên bản mới nhất</p>
 					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div className="text-secondary px-4 text-center">
+			<div className="py-5">
+				<h1 className="display-5 fw-bold">Đối tác tài trợ</h1>
+				<div className="col-lg-7 mx-auto">
+					<a href="https://jetbrains.com" target="_blank">
+						<img src="img/sponsor/jetbrains.png" width="40%"/>
+					</a>
 				</div>
 			</div>
 		</div>
